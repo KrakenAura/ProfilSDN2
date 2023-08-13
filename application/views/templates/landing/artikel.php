@@ -11,15 +11,14 @@
             </div>
         </header>
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <div class="article">
-                <h1>Memahami Dasar-Dasar Bootstrap</h1>
-                <p>Bootstrap adalah kerangka kerja CSS yang populer untuk membangun tata letak dan komponen web yang responsif. Ini menyediakan berbagai komponen siap pakai dan gaya yang dapat Anda gunakan untuk mempercepat pengembangan situs web Anda.</p>
-                <p>Dalam artikel ini, kami akan membahas beberapa konsep dasar Bootstrap, termasuk grid system, typography, komponen umum seperti tombol dan jumbotron, serta cara membuat situs web yang responsif menggunakan Bootstrap.</p>
-                <p>Jadi, mari kita mulai memahami bagaimana Bootstrap dapat membantu Anda menciptakan tampilan dan perasaan yang konsisten di seluruh situs web Anda sambil menghemat waktu dan usaha dalam prosesnya.</p>
+                <h2>Memahami Dasar-Dasar Bootstrap 5</h2>
+                <p>Bootstrap 5 adalah versi terbaru dari kerangka kerja CSS yang populer untuk membangun tata letak dan komponen web yang responsif. Dengan fitur-fitur baru dan perbaikan yang dibawa oleh Bootstrap 5, Anda dapat mengembangkan situs web yang lebih canggih dan modern.</p>
+                <p>Dalam artikel ini, kami akan menjelaskan konsep-konsep dasar Bootstrap 5, termasuk penggunaan grid system yang fleksibel, komponen-komponen yang ditingkatkan seperti navbar dan card, serta cara membuat tata letak responsif yang menarik.</p>
+                <p>Jadi, mari kita memulai perjalanan Anda dalam memahami Bootstrap 5 dan bagaimana Anda dapat memanfaatkannya untuk mengembangkan situs web yang luar biasa.</p>
             </div>
         </div>
     </div>
