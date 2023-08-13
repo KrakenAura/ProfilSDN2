@@ -40,11 +40,24 @@ class SambutanController extends CI_Controller
     {
         $id = $this->input->post('id');
         $nama_kepsek = $this->input->post('nama_kepsek');
-        $foto = $this->input->post('foto');
+        $foto = $_FILES['foto'];
         $sambutan = $this->input->post('sambutan');
+        if ($foto = '') {
+        } else {
+            $config['upload_path'] = './assets/Resource/sambutan';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')) {
+                echo "Upload Gagal";
+                die();
+            }else{
+                $foto = $this->upload->data('file_name');
+            }
+        }
 
         $data = array(
-            'nama_kepsek' =>  $nama_kepsek,
+            'nama_kepsek' => $nama_kepsek,
             'foto' => $foto,
             'sambutan' => $sambutan
         );

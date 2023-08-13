@@ -18,7 +18,8 @@
                                 <tr>
                                     <td><?php echo $no++ ?></td>
                                     <td><?php echo $data_sambutan->nama_kepsek ?></td>
-                                    <td><?php echo $data_sambutan->foto ?></td>
+                                    <!-- <td><?php echo $data_sambutan->foto ?></td> -->
+                                    <td><img src="<?= base_url('assets/Resource/sambutan/') ?><?php echo $data_sambutan->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                     <td><?php echo $data_sambutan->sambutan ?></td>
                                     <td>
                                         <?php echo anchor(
