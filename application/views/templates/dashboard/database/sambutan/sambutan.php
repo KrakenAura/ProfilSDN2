@@ -14,16 +14,17 @@
                             </tr>
                             <?php
                             $no = 1;
-                            foreach ($sambutan as $sambutan) : ?>
+                            foreach ($sambutan as $data_sambutan) : ?>
                                 <tr>
                                     <td><?php echo $no++ ?></td>
-                                    <td><?php echo $sambutan->nama_kepsek ?></td>
-                                    <td><?php echo $sambutan->foto ?></td>
-                                    <td><?php echo $sambutan->sambutan ?></td>
-                                    <td><?php echo anchor('SambutanController/edit/', '<div class="btn btn-primary btn-sm">
-                                            <i class="align-middle me-2" data-feather="edit"></i>
-                                            Edit
-                                        </div>') ?>
+                                    <td><?php echo $data_sambutan->nama_kepsek ?></td>
+                                    <td><?php echo $data_sambutan->foto ?></td>
+                                    <td><?php echo $data_sambutan->sambutan ?></td>
+                                    <td>
+                                        <?php echo anchor(
+                                            '/index.php/SambutanController/edit/' . $data_sambutan->id,
+                                            '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
+                                        ) ?>
                                     </td>
                                 </tr>
 

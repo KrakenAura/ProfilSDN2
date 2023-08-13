@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class DashboardController extends CI_Controller
+class SambutanController extends CI_Controller
 {
 
     /**
@@ -21,19 +21,39 @@ class DashboardController extends CI_Controller
      */
     public function index()
     {
-        $this->load->view('/templates/landing/header');
-        $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/index');
-        $this->load->view('/templates/landing/footer');
+        $data['sambutan'] = $this->m_sambutan->tampil_data()->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/sambutan/sambutan', $data);
+        $this->load->view('/templates/dashboard/footer');
     }
-    public function edit()
+    public function edit($id)
     {
-        $data['sambutan'] = $this->m_sambutan->edit('sambutan')->result();
-        $this->load->view('/templates/landing/header');
-        $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/index');
-        $this->load->view('/templates/landing/footer');
+        $where = array('id' => $id);
+        $data['sambutan'] = $this->m_sambutan->edit($where, 'sambutan')->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/sambutan/edit', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function update()
+    {
+        $id = $this->input->post('id');
+        $nama_kepsek = $this->input->post('nama_kepsek');
+        $foto = $this->input->post('foto');
+        $sambutan = $this->input->post('sambutan');
 
+        $data = array(
+            'nama_kepsek' =>  $nama_kepsek,
+            'foto' => $foto,
+            'sambutan' => $sambutan
+        );
 
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_sambutan->update($where, $data, 'sambutan');
+        redirect('index.php/SambutanController/index');
     }
 }
