@@ -27,5 +27,14 @@ class HomeController extends CI_Controller
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/index',$data);
         $this->load->view('/templates/landing/footer');
+        //$this->load->view('/templates/landing/about');
+    }
+    public function contact()
+    {
+        $this->load->view('/templates/landing/header');
+        $this->load->view('/templates/landing/navbar');
+        $this->load->view('/templates/landing/contact');
+        $this->load->view('/templates/landing/footer');
+        //$this->load->view('/templates/landing/about');
     }
 }
