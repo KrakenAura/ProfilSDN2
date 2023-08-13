@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class HomeController extends CI_Controller
+class ContactController extends CI_Controller
 {
 
     /**
@@ -23,7 +23,7 @@ class HomeController extends CI_Controller
     {
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/index');
+        $this->load->view('/templates/landing/contact');
         $this->load->view('/templates/landing/footer');
     }
 }
