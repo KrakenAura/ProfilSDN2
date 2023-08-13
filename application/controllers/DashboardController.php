@@ -26,4 +26,12 @@ class DashboardController extends CI_Controller
         $this->load->view('/templates/dashboard/index');
         $this->load->view('/templates/dashboard/footer');
     }
+    public function sambutan()
+    {
+        $data['sambutan'] = $this->m_sambutan->tampil_data()->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/sambutan', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
 }

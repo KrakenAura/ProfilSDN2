@@ -11,9 +11,15 @@
                         Pages
                     </li>
 
-                    <li class="sidebar-item active">
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="index.html">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="<?= base_url('/index.php/DashboardController/sambutan') ?>">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Sambutan Kepala Sekolah</span>
                         </a>
                     </li>
 
