@@ -10,6 +10,29 @@
             </div>
         </div>
     </header>
+
+    <!-- Section Sambutan-->
+    <section class="container-custom">
+        <div class="row">
+            <div class="col-12 col-sm-6 d-md-flex justify-content-md-ceneter" style="padding-left: 200px">
+                <img src="<?= base_url('assets/Resource/sambutan/') ?>unsplash-1.jpg" alt="Foto Kepsek" width="533" Loading="lazy">
+            </div>
+            <div class="col-12 col-sm-6 align-self-center justify-content-md-ceneter">
+                <div class="content-width">
+                    <span>
+                        <h1 class="h2 mb-4">Sambutan Kepala Sekolah</h1>
+                        <p class="mb-4">
+                            <?php foreach ($sambutan as $sambutan) : ?>
+                        <p><?php echo $sambutan->sambutan ?></p>
+                        <h5 style="color: #17202A"><?php echo $sambutan->nama_kepsek ?></h5>
+                    <?php endforeach ?>
+                    </p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content-->
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
