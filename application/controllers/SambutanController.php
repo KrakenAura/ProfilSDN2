@@ -26,4 +26,14 @@ class DashboardController extends CI_Controller
         $this->load->view('/templates/landing/index');
         $this->load->view('/templates/landing/footer');
     }
+    public function edit()
+    {
+        $data['sambutan'] = $this->m_sambutan->edit('sambutan')->result();
+        $this->load->view('/templates/landing/header');
+        $this->load->view('/templates/landing/navbar');
+        $this->load->view('/templates/landing/index');
+        $this->load->view('/templates/landing/footer');
+
+
+    }
 }
