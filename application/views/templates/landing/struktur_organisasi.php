@@ -3,8 +3,8 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="page-heading">
-                        <h1>Home</h1>
-                        <span class="subheading">Halaman Utama</span>
+                        <h1>Struktur Organisasi</h1>
+                        <span class="subheading">SD Negeri 2 Mulyoagung</span>
                     </div>
                 </div>
             </div>
