@@ -13,7 +13,7 @@
 
     <!-- <img src="<?= base_url('/assets/Resource/sambutan/avatar.jpg') ?>" class="card-img-top" alt="..."> -->
     <!-- Struktur Organisasi Cards-->
-    <div class="card-group">
+    <!-- <div class="card-group">
         <div class="card">
             <div class="card-body">
                 <img src="<?= base_url('/assets/Resource/sambutan/avatar.jpg') ?>" class="card-img-top" alt="...">
@@ -32,4 +32,27 @@
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <section>
+        <div class="container">
+            <div class="row g-4">
+                <?php foreach ($struktur_organisasi as $data_struktur) : ?>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-primary border-4">
+                                <h3 class="card-title mb-3">
+                                    <?php echo $data_struktur->nama ?>
+                                </h3>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                    Similique, veritatis aliquam saepe natus id fugit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </section>
