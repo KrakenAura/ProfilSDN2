@@ -22,7 +22,7 @@
                             <!-- Add more dropdown items as needed -->
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/post') ?>">Struktur Organisasi</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('StrukturOrganisasiController/index') ?>">Struktur Organisasi</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/post') ?>">Kegiatan Rutin</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/post') ?>">Ekstrakuliker</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/post') ?>">Artikel</a></li>

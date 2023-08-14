@@ -11,13 +11,12 @@
         </div>
     </header>
 
-    <!--Section Sambutan-->
-    <section class="container-custom">
-        <div class="row justify-content-around">
-            <div class="col-4">
-                <img src="<?= base_url('assets/Resource/sambutan/') ?>unsplash-1.jpg" alt="Foto Kepsek" width="533" loading="lazy" class="custom-img-fluid">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <img src="<?= base_url('assets/Resource/sambutan/' . $sambutan[0]->foto) ?>" alt="Foto Kepsek" loading="lazy" class="img-fluid float-end" style="width: 500px;">
             </div>
-            <div class="col-4">
+            <div class="col">
                 <div class="content-width">
                     <h2 class="text-sm">Sambutan Kepala Sekolah</h1>
                         <?php foreach ($sambutan as $sambutanItem) : ?>
@@ -26,8 +25,10 @@
                         <?php endforeach ?>
                 </div>
             </div>
+
         </div>
-    </section>
+    </div>
+
 
 
     <!-- Main Content-->
