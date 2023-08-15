@@ -19,6 +19,24 @@
         .card {
             border-radius: 20px;
             border: 8px solid #
+      
         }
+        /* Customize your styles here */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+article {
+  border: 15px solid #ddd;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.card0 {
+  background-color: #f8f9fa;
+}
+
     </style>
+
 </head>
