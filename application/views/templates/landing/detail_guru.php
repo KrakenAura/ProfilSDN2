@@ -14,40 +14,46 @@
     <section class="content">
         <h4 class="mb-4 p-3"><strong>Detail Data Guru</strong></h4>
         <div class="row justify-content-around">
-            <div class="col-4 border mb-4">
-                <!-- <img src="<?php echo base_url('assets/Resource/struktur_organisasi') ?><?php echo $detail->foto ?>"> -->
-                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $detail->foto) ?>" class="rounded mx-auto d-block" style="width: 400px;">
+            <div class="col-4 mb-4">
+                <div class="card rounded" style=" background-color:#FFFFFF; box-shadow: 5px 5px 20px #A6ACAF; padding: 5px 10px;">
+                    <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $detail->foto) ?>" class="img-fluid mx-auto d-block mt-4" style="width: 300px ;">
+                    <br>
+                    <br>
+
+                </div>
 
             </div>
-            <div class="col-4 border mb-4">
-                <table class="table">
+            <div class="col-4 mb-4">
+                <table class="table-responsive">
                     <tr>
                         <th>Nama Lengkap</th>
-                        <td><?php echo $detail->nama ?></td>
+                        <td style="padding-left: 25px"><?php echo $detail->nama ?></td>
                     </tr>
                     <tr>
-                        <th>Nomor Identitas Pegawai Negeri Sipil</th>
-                        <td><?php echo $detail->nip ?></td>
+                        <th>NIP</th>
+                        <td style="padding-left: 25px"><?php echo $detail->nip ?></td>
                     </tr>
                     <tr>
                         <th>Jabatan</th>
-                        <td><?php echo $detail->jabatan ?></td>
+                        <td style="padding-left: 25px"><?php echo $detail->jabatan ?></td>
                     </tr>
                     <tr>
                         <th>Status</th>
-                        <td><?php echo $detail->status ?></td>
+
+                        <td style="padding-left: 25px"><?php echo $detail->status ?></td>
                     </tr>
                     <tr>
                         <th>Mata Pelajaran</th>
-                        <td><?php echo $detail->mata_pelajaran ?></td>
+
+                        <td style="padding-left: 25px"><?php echo $detail->mata_pelajaran ?></td>
                     </tr>
                     <tr>
                         <th>Jenis Kelamin</th>
-                        <td><?php echo $detail->jenis_kelamin ?></td>
+                        <td style="padding-left: 25px"><?php echo $detail->jenis_kelamin ?></td>
                     </tr>
                     <tr>
                         <th>Email</th>
-                        <td><?php echo $detail->email ?></td>
+                        <td style="padding-left: 25px"><?php echo $detail->email ?></td>
                     </tr>
                 </table>
                 <br>

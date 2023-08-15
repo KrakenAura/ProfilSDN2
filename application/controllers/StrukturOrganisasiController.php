@@ -74,7 +74,6 @@ class StrukturOrganisasiController extends CI_Controller
                 $foto = $this->upload->data('file_name');
             }
         }
-
         $data = array(
             'nama' => $nama,
             'nip' => $nip,

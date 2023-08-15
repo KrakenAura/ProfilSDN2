@@ -33,13 +33,13 @@
                                     <td><img src="<?= base_url('assets/Resource/struktur_organisasi/') ?><?php echo $data_struktur->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                     <td>
                                         <?php echo anchor(
-                                            '/index.php/SambutanController/edit/' . $data_struktur->id,
+                                            '/index.php/StrukturOrganisasiController/edit/' . $data_struktur->id,
                                             '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                         ) ?>
                                     </td>
                                     <td>
                                         <?php echo anchor(
-                                            '/index.php/SambutanController/edit/' . $data_struktur->id,
+                                            '/index.php/StrukturOrganisasiController/edit/' . $data_struktur->id,
                                             '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
                                         ) ?>
                                     </td>
@@ -96,7 +96,9 @@
                                     </div>
                                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
                                     <button type="submit" class="btn btn-primary">Simpan</button>
-                                    </form>
+                                    <!-- </form> -->
+                                    <?php echo form_close(); ?>
+
                                 </div>
                             </div>
                         </div>

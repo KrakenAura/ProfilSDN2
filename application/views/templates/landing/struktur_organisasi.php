@@ -63,7 +63,7 @@
                     <div class="col-lg-3">
                         <div class="card bg-light">
                             <div class="card-body text-center">
-                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-3 border-gray">
+                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-3 border-gray" style="width: 150px; height: 150px;">
                                 <h3 class="card-title mb-1 mt-3">
                                     <?php echo $data_struktur->nama ?>
                                 </h3>
