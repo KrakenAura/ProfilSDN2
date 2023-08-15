@@ -25,7 +25,7 @@
     <div class="row">
       <div class="col-lg-8">
         <article>
-          <h2 class="mb-3">Judul Artikel</h2>
+          <h1 class="mb-3"> Artikel SDN 2 Mulyoagung Malang</h1>
           <p>
             Ini adalah contoh artikel yang berisi teks artikel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, nisi vel tincidunt accumsan, ligula velit posuere justo, non vehicula felis tellus ac lectus.
           </p>
