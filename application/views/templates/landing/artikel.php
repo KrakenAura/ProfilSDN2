@@ -29,18 +29,7 @@
       <div class="col-lg-8">
         <article>
           <h1 class="mb-3">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</h1>
-          <p>
-            Sekolah Dasar Negeri (SDN) 2 Mulyoagung Malang telah menjadi tempat di mana kreativitas anak-anak berkembang dengan cemerlang. Melalui berbagai kegiatan dan program inovatif, sekolah ini telah membuktikan bahwa belajar di SD bisa menjadi pengalaman yang menarik dan bermanfaat bagi anak-anak.
-          </p>
-          <p>
-            Salah satu keunggulan SDN 2 Mulyoagung adalah penggunaan pendekatan pembelajaran berbasis proyek. Setiap siswa diberikan proyek-proyek menarik yang memungkinkan mereka untuk belajar melalui eksplorasi dan interaksi langsung dengan materi pelajaran. Proyek-proyek ini mencakup segala hal mulai dari ilmu pengetahuan alam hingga seni dan budaya.
-          </p>
-          <p>
-            Selain itu, sekolah ini juga memiliki fasilitas yang mendukung pengembangan kreativitas siswa. Ruang seni, perpustakaan, dan area bermain yang aman telah membantu menciptakan lingkungan belajar yang nyaman dan inspiratif. Dengan demikian, setiap siswa merasa didorong untuk menjelajahi minat dan bakatnya.
-          </p>
-          <p>
-            Setiap tahun, SDN 2 Mulyoagung juga menyelenggarakan acara besar yang melibatkan seluruh siswa, orang tua, dan komunitas. Festival Seni dan Sains, serta pasar buku, adalah beberapa contoh acara yang telah menginspirasi siswa untuk tampil di depan umum dan berbagi pengetahuan mereka.
-          </p>
+          
         </article>
       </div>
       <div class="col-lg-4">
@@ -139,7 +128,10 @@
           <p>Tips untuk membantu siswa mengatasi rasa gugup sebelum ujian, serta informasi penting tentang jadwal ulangan dan libur sekolah.</p>
         </div>
       </div>
-    </div>
+    </div> class="col-md-6">
+    <div class="article">
+      <h2> cerita inspiratif</h2>
+      <p> ketika aku merindukanmu aku hanya bisa terdiam dan merenung ? apa kabar kamu disana semoga kita baik baik saja ya <p>
   </div>
 </body>
 
