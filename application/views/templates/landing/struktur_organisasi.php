@@ -33,6 +33,28 @@
             </div>
         </div>
     </div> -->
+    <style>
+        .card {
+            border-radius: 20px;
+            border: 2px solid #7D7589;
+            overflow: hidden;
+        }
+
+        .card .btn-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+
+        }
+
+        .card:hover .btn-overlay {
+            opacity: 1;
+        }
+
+    </style>
 
     <section>
         <div class="container">
@@ -41,12 +63,13 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card bg-light">
                             <div class="card-body text-center">
-                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-primary border-4">
+                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-3 border-gray">
                                 <h3 class="card-title mb-3">
                                     <?php echo $data_struktur->nama ?>
                                 </h3>
                                 <p class="card-text text-muted">NIP : <?php echo $data_struktur->nip ?></p>
                                 <p class="card-text text-muted"><?php echo $data_struktur->jabatan ?></p>
+                                <button class="btn btn-primary btn-overlay">View Profile</button>
                             </div>
                         </div>
                     </div>

@@ -16,27 +16,19 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?= base_url('assets/Home/') ?>css/styles.css" rel="stylesheet" />
     <style>
-        .card {
-            border-radius: 20px;
-            border: 8px solid #
-      
+        body {
+            font-family: Arial, sans-serif;
         }
-        /* Customize your styles here */
 
-body {
-  font-family: Arial, sans-serif;
-}
+        article {
+            border: 15px solid #ddd;
+            padding: 30px;
+            background-color: #fff;
+        }
 
-article {
-  border: 15px solid #ddd;
-  padding: 30px;
-  background-color: #fff;
-}
-
-.card0 {
-  background-color: #f8f9fa;
-}
-
+        .card0 {
+            background-color: #f8f9fa;
+        }
     </style>
 
 </head>
