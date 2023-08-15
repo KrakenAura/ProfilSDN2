@@ -28,7 +28,7 @@
     <div class="row">
       <div class="col-lg-8">
         <article>
-          <h1 class="mb-3">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</h1>
+          <h1 class="mb-5">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</h1>
           
         </article>
       </div>
@@ -128,7 +128,7 @@
           <p>Tips untuk membantu siswa mengatasi rasa gugup sebelum ujian, serta informasi penting tentang jadwal ulangan dan libur sekolah.</p>
         </div>
       </div>
-    </div> class="col-md-6">
+    </div class="col-md-6">
     <div class="article">
       <h2> cerita inspiratif</h2>
       <p> ketika aku merindukanmu aku hanya bisa terdiam dan merenung ? apa kabar kamu disana semoga kita baik baik saja ya <p>
