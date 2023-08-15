@@ -12,6 +12,10 @@
         </header>
         <!DOCTYPE html>
 <html lang="en">
+  <style>
+
+
+  </style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,4 +87,60 @@
     </table>
   </div>
 </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Web Sekolah SD</title>
+  <style>
+    /* Style untuk bagian artikel */
+    .article {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f7f7f7;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+    }
+    .article h2 {
+      color: #333;
+    }
+    .article p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="article">
+          <h2>Berita Terbaru</h2>
+          <p>Informasi tentang acara lomba menulis yang berhasil dimenangkan oleh siswa-siswi sekolah kami. Selamat kepada para pemenang!</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="article">
+          <h2>Kegiatan Ekstrakurikuler</h2>
+          <p>Siswa-siswi dapat mengikuti berbagai kegiatan ekstrakurikuler seperti Klub Seni Rupa, Klub Sepak Bola, dan Klub Sains untuk mengembangkan bakat dan minat mereka.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="article">
+          <h2>Program Pembelajaran</h2>
+          <p>Program pembelajaran kami mengedepankan pendekatan berbasis proyek yang melibatkan siswa dalam eksplorasi dan interaksi langsung dengan materi pelajaran. Siswa belajar sambil bermain!</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="article">
+          <h2>Tips dan Informasi</h2>
+          <p>Tips untuk membantu siswa mengatasi rasa gugup sebelum ujian, serta informasi penting tentang jadwal ulangan dan libur sekolah.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
