@@ -11,17 +11,71 @@
             </div>
         </header>
 <body>
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contoh Artikel</title>
+</head>
+<body>
+  <div class="container mt-5">
     <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="article">
-                <h2>Memahami Dasar-Dasar Bootstrap 5</h2>
-                <p>Bootstrap 5 adalah versi terbaru dari kerangka kerja CSS yang populer untuk membangun tata letak dan komponen web yang responsif. Dengan fitur-fitur baru dan perbaikan yang dibawa oleh Bootstrap 5, Anda dapat mengembangkan situs web yang lebih canggih dan modern.</p>
-                <p>Dalam artikel ini, kami akan menjelaskan konsep-konsep dasar Bootstrap 5, termasuk penggunaan grid system yang fleksibel, komponen-komponen yang ditingkatkan seperti navbar dan card, serta cara membuat tata letak responsif yang menarik.</p>
-                <p>Jadi, mari kita memulai perjalanan Anda dalam memahami Bootstrap 5 dan bagaimana Anda dapat memanfaatkannya untuk mengembangkan situs web yang luar biasa.</p>
-            </div>
+      <div class="col-lg-8">
+        <article>
+          <h2 class="mb-3">Judul Artikel</h2>
+          <p>
+            Ini adalah contoh artikel yang berisi teks artikel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, nisi vel tincidunt accumsan, ligula velit posuere justo, non vehicula felis tellus ac lectus.
+          </p>
+          <p>
+            Duis vestibulum, ipsum eget consectetur auctor, ex est tristique dolor, eget facilisis risus mi id libero. Nullam volutpat, ligula non consequat venenatis, odio justo hendrerit eros, ut volutpat mi ante id metus.
+          </p>
+        </article>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Artikel Terkait</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Judul Artikel Terkait 1</a></li>
+              <li><a href="#">Judul Artikel Terkait 2</a></li>
+              <li><a href="#">Judul Artikel Terkait 3</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
+  <div class="container mt-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Judul Artikel</th>
+          <th scope="col">Tanggal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><a href="#">Judul Artikel 1</a></td>
+          <td>2023-08-15</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td><a href="#">Judul Artikel 2</a></td>
+          <td>2023-08-16</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td><a href="#">Judul Artikel 3</a></td>
+          <td>2023-08-17</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
+</html>
