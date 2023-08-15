@@ -12,7 +12,7 @@
     </header>
 
     <section class="content">
-        <h4 class="mb-4 p-3"><strong>Detail Data Guru</strong></h4>
+        <h4 class="mb-4 p-3 border" style="padding-left: 2rem;"><strong>Detail Data Guru</strong></h4>
         <div class="row justify-content-center">
             <div class="col-4 mb-4 ">
                 <!-- <div class="card rounded" style=" background-color:#FFFFFF; box-shadow: 5px 5px 20px #A6ACAF; padding: 5px 10px;"> -->
@@ -23,50 +23,53 @@
                 <!-- </div> -->
 
             </div>
-            <div class="col-4 mb-4 align-self-center">
-                <table class="table-responsive mt-3 align-middle ">
-                    <tr>
-                        <th class="">Nama Lengkap</th>
-                        <td class=" w-5">&nbsp :</td>
-                        <td class="" style="padding-left: 25px;"><?php echo $detail->nama ?></td>
-                    </tr>
+            <div class="col">
+                <div class="table-responsive mt-3">
+                    <table class="table align-middle">
+                        <tr>
+                            <th class="">Nama Lengkap</th>
+                            <td class=" w-5">&nbsp :</td>
+                            <td class="" style="padding-left: 25px;"><?php echo $detail->nama ?></td>
+                        </tr>
 
-                    <tr>
-                        <th>NIP</th>
-                        <td class=" w-5">&nbsp :</td>
-                        <td style="padding-left: 25px"><?php echo $detail->nip ?></td>
-                    </tr>
-                    <tr>
-                        <th>Jabatan</th>
-                        <td class=" w-5">&nbsp :</td>
-                        <td style="padding-left: 25px"><?php echo $detail->jabatan ?></td>
-                    </tr>
-                    <tr>
-                        <th>Status</th>
-                        <td class=" w-5">&nbsp :</td>
+                        <tr>
+                            <th>NIP</th>
+                            <td class=" w-5">&nbsp :</td>
+                            <td style="padding-left: 25px"><?php echo $detail->nip ?></td>
+                        </tr>
+                        <tr>
+                            <th>Jabatan</th>
+                            <td class=" w-5">&nbsp :</td>
+                            <td style="padding-left: 25px"><?php echo $detail->jabatan ?></td>
+                        </tr>
+                        <tr>
+                            <th>Status</th>
+                            <td class=" w-5">&nbsp :</td>
 
-                        <td style="padding-left: 25px"><?php echo $detail->status ?></td>
-                    </tr>
-                    <tr>
-                        <th>Mata Pelajaran</th>
-                        <td class=" w-5">&nbsp :</td>
+                            <td style="padding-left: 25px"><?php echo $detail->status ?></td>
+                        </tr>
+                        <tr>
+                            <th>Mata Pelajaran</th>
+                            <td class=" w-5">&nbsp :</td>
 
-                        <td style="padding-left: 25px"><?php echo $detail->mata_pelajaran ?></td>
-                    </tr>
-                    <tr>
-                        <th>Jenis Kelamin</th>
-                        <td class=" w-5">&nbsp :</td>
-                        <td style="padding-left: 25px"><?php echo $detail->jenis_kelamin ?></td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td class=" w-5">&nbsp :</td>
-                        <td style="padding-left: 25px"><?php echo $detail->email ?></td>
-                    </tr>
-                </table>
-                <br>
-                <br>
+                            <td style="padding-left: 25px"><?php echo $detail->mata_pelajaran ?></td>
+                        </tr>
+                        <tr>
+                            <th>Jenis Kelamin</th>
+                            <td class=" w-5">&nbsp :</td>
+                            <td style="padding-left: 25px"><?php echo $detail->jenis_kelamin ?></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td class=" w-5">&nbsp :</td>
+                            <td style="padding-left: 25px"><?php echo $detail->email ?></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </div>
             </div>
+
         </div>
 
 
