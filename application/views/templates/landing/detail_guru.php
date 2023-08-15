@@ -23,8 +23,8 @@
                 <!-- </div> -->
 
             </div>
-            <div class="col-4 mb-4 ">
-                <table class="table-responsive mt-3 ">
+            <div class="col-4 mb-4 align-self-center">
+                <table class="table-responsive mt-3 align-middle ">
                     <tr>
                         <th class="">Nama Lengkap</th>
                         <td class=" w-5">&nbsp :</td>
@@ -42,7 +42,7 @@
                         <td style="padding-left: 25px"><?php echo $detail->jabatan ?></td>
                     </tr>
                     <tr>
-                        <th>Status :</th>
+                        <th>Status</th>
                         <td class=" w-5">&nbsp :</td>
 
                         <td style="padding-left: 25px"><?php echo $detail->status ?></td>
