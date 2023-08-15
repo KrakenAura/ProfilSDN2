@@ -89,7 +89,7 @@ class StrukturOrganisasiController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_strukturOrganisasi->update($where, $data, 'sambutan');
+        $this->m_strukturOrganisasi->update($where, $data, 'struktur_organisasi');
         redirect('index.php/StrukturOrganisasiController/index');
     }
     public function tambah()
