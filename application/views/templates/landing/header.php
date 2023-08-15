@@ -16,33 +16,6 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?= base_url('assets/Home/') ?>css/styles.css" rel="stylesheet" />
     <style>
-        .card {
-            border-radius: 20px;
-            border: 2px solid #7D7589;
-            overflow: hidden;
-        }
-
-        .card .btn-overlay {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-
-        }
-
-        .card:hover .btn-overlay {
-            opacity: 1;
-        }
-
-        .card-text1 {
-            margin-bottom: 5px;
-            =======border: 8px solid # >>>>>>> e5afbac5126be345ec76747047ae5e3a9bab03ba
-        }
-
-        /* Customize your styles here */
-
         body {
             font-family: Arial, sans-serif;
         }
