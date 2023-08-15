@@ -45,10 +45,8 @@
                                 <h3 class="card-title mb-3">
                                     <?php echo $data_struktur->nama ?>
                                 </h3>
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                    Similique, veritatis aliquam saepe natus id fugit.
-                                </p>
+                                <p class="card-text text-muted">NIP : <?php echo $data_struktur->nip ?></p>
+                                <p class="card-text text-muted"><?php echo $data_struktur->jabatan ?></p>
                             </div>
                         </div>
                     </div>
