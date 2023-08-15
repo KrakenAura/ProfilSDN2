@@ -38,6 +38,24 @@
 
         .card-text1 {
             margin-bottom: 5px;
+            =======border: 8px solid # >>>>>>> e5afbac5126be345ec76747047ae5e3a9bab03ba
+        }
+
+        /* Customize your styles here */
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        article {
+            border: 15px solid #ddd;
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        .card0 {
+            background-color: #f8f9fa;
         }
     </style>
+
 </head>
