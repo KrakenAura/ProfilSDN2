@@ -123,8 +123,8 @@
       </div>
       <div class="col-md-6">
         <div class="article">
-          <h2>Kegiatan Ekstrakurikuler</h2>
-          <p>Siswa-siswi dapat mengikuti berbagai kegiatan ekstrakurikuler seperti Klub Seni Rupa, Klub Sepak Bola, dan Klub Sains untuk mengembangkan bakat dan minat mereka.</p>
+          <h2>Kegiatan Sosial dan kemanusian</h2>
+          <p>Informasi mengenai kegiatan amal, sosial, atau pengabdian masyarakat yang dilakukan oleh siswa atau sekolah sebagai bagian dari pendidikan karakter..</p>
         </div>
       </div>
       <div class="col-md-6">
