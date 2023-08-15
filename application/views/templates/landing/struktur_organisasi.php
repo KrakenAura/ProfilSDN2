@@ -70,7 +70,11 @@
                                 <p class="card-text text-muted mt-1 mb-4" style="font-size: 1em;">NIP : <?php echo $data_struktur->nip ?></p>
                                 <br>
                                 <br>
-                                <button class="btn btn-primary btn-overlay">View Profile</button>
+                                <!-- <button class="btn btn-primary btn-overlay">View Profile</button> -->
+                                <!-- <?php echo anchor('index.php/StrukturOrganisasiController/detail', $data_struktur->id, '<button class="btn btn-primary btn-overlay">View Profile</button>') ?> -->
+                                <!-- <button class="btn btn-primary btn-overlay">View Profile</button> -->
+                                <?php echo anchor('index.php/StrukturOrganisasiController/detail/' . $data_struktur->id, '<button class="btn btn-primary btn-overlay">View Profile</button>') ?>
+
                             </div>
                         </div>
                     </div>

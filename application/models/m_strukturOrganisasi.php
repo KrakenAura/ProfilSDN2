@@ -19,4 +19,9 @@ class m_strukturOrganisasi extends CI_Model
     {
         $this->db->insert('struktur_organisasi', $data);
     }
+    public function detail_data($id = NULL)
+    {
+        $query = $this->db->get_where('struktur_organisasi', array('id' => $id))->row();
+        return $query;
+    }
 }

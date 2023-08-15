@@ -130,4 +130,16 @@ class StrukturOrganisasiController extends CI_Controller
         $this->m_strukturOrganisasi->input($data);
         redirect('index.php/StrukturOrganisasiController/dashboard');
     }
+
+    public function detail($id)
+    {
+        $this->load->model('m_strukturOrganisasi');
+        $detail = $this->m_strukturOrganisasi->detail_data($id);
+        $data['detail'] = $detail;
+
+        $this->load->view('/templates/landing/header');
+        $this->load->view('/templates/landing/navbar');
+        $this->load->view('/templates/landing/detail_guru', $data);
+        $this->load->view('/templates/landing/footer');
+    }
 }
