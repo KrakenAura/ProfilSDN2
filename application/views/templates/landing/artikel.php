@@ -28,8 +28,8 @@
     <div class="row">
       <div class="col-lg-8">
         <article>
-          <h1 class="mb-5">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</h1>
-          
+          <h1 class="mb-3">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</h1>
+
         </article>
       </div>
       <div class="col-lg-4">
@@ -102,7 +102,7 @@
   </style>
 </head>
 <body>
-  <div class="container mt-5">
+  <div class="container mt-">
     <div class="row">
       <div class="col-md-6">
         <div class="article">
