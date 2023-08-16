@@ -12,7 +12,7 @@
         </header>
 
         <!-- Main Content-->
-        <main class="mb-4">
+        <!-- <main class="mb-4">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -22,4 +22,49 @@
                     </div>
                 </div>
             </div>
+        </main> -->
+        <main>
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row border">
+                    <div class="col-md-6 border">
+                        <?php foreach ($profil_sekolah as $data_profil) : ?>
+                            <img src="<?= base_url('assets/Resource/profil_sekolah/' . $data_profil->foto) ?>" loading="lazy" class="img-fluid mx-auto d-block mt-4" style="width: 500px;">
+                        <?php endforeach ?>
+                    </div>
+                    <div class="col-md-6 border">
+                        <div class="content-width">
+                            <?php foreach ($profil_sekolah as $data_profil) : ?>
+                                <p><?php echo $data_profil->deskripsi ?></p>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Visi Kami</h2>
+                        <ul>
+                            <?php foreach ($visi as $data_visi) : ?>
+                                <li>
+                                    <p><?php echo $data_visi->visi ?></p>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h2>Misi Kami</h2>
+                        <ul>
+                            <?php foreach ($misi as $data_misi) : ?>
+                                <li>
+                                    <p><?php echo $data_misi->misi ?></p>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+
+
         </main>

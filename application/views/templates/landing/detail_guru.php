@@ -12,7 +12,10 @@
     </header>
 
     <section class="content">
-        <h4 class="mb-4 p-3 border" style="padding-left: 2rem;"><strong>Detail Data Guru</strong></h4>
+        <div class="row">
+            <h4 class="mb-4 p-3" style="padding-left: 2rem;"><strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDetail Data Guru</strong></h4>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col-4 mb-4 ">
                 <!-- <div class="card rounded" style=" background-color:#FFFFFF; box-shadow: 5px 5px 20px #A6ACAF; padding: 5px 10px;"> -->

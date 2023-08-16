@@ -12,16 +12,16 @@
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/index') ?>">Home</a></li>
                     <!--<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/about') ?>">Tentang Kami</a></li>-->
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" id="tentangDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tentang Kami
                         </a>
                         <div class="dropdown-menu " aria-labelledby="tentangDropdown">
                             <a class="dropdown-item" href="<?php echo base_url('index.php/AboutController/index') ?>">About Us</a>
                             <a class="dropdown-item" href="<?php echo base_url('HomeController/visi_misi') ?>">Visi dan Misi</a>
-                            <!-- Add more dropdown items as needed -->
                         </div>
-                    </li>
+                    </li> -->
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('TentangKamiController/index') ?>">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('StrukturOrganisasiController/index') ?>">Struktur Organisasi</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/post') ?>">Kegiatan Rutin</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/post') ?>">Ekstrakuliker</a></li>

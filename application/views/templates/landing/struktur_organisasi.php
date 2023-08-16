@@ -48,6 +48,7 @@
             opacity: 0;
             transition: opacity 0.3s ease;
 
+
         }
 
         .card:hover .btn-overlay {
@@ -63,8 +64,8 @@
                     <div class="col-lg-3">
                         <div class="card bg-light">
                             <div class="card-body text-center">
-                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-3 border-gray" style="width: 150px; height: 150px;">
-                                <h3 class="card-title mb-1 mt-3">
+                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-3 border-gray mb-4" style="width: 150px; height: 150px;">
+                                <h3 class="card-title mb-1">
                                     <?php echo $data_struktur->nama ?>
                                 </h3>
                                 <p class="card-text text-muted mt-1 mb-4" style="font-size: 1em;">NIP : <?php echo $data_struktur->nip ?></p>
@@ -73,7 +74,8 @@
                                 <!-- <button class="btn btn-primary btn-overlay">View Profile</button> -->
                                 <!-- <?php echo anchor('index.php/StrukturOrganisasiController/detail', $data_struktur->id, '<button class="btn btn-primary btn-overlay">View Profile</button>') ?> -->
                                 <!-- <button class="btn btn-primary btn-overlay">View Profile</button> -->
-                                <?php echo anchor('index.php/StrukturOrganisasiController/detail/' . $data_struktur->id, '<button class="btn btn-primary btn-overlay">View Profile</button>') ?>
+                                <?php echo anchor('index.php/StrukturOrganisasiController/detail/' . $data_struktur->id, '<button class="btn btn-secondary btn-overlay">Detail Guru</button>') ?>
+                                <!-- <?php echo anchor('index.php/StrukturOrganisasiController/detail/' . $data_struktur->id, '<h2 class="bg-light p-2" style="color: #616A6B">Detail Guru</h2>') ?> -->
 
                             </div>
                         </div>
