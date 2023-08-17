@@ -37,6 +37,11 @@
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Kegiatan Rutin</span>
                         </a>
                     </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="<?= base_url('/index.php/EkstrakulikulerController/dashboard') ?>">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Ekstrakulikuler</span>
+                        </a>
+                    </li>
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="pages-profile.html">

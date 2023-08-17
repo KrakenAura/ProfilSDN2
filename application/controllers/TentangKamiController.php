@@ -49,9 +49,7 @@ class TentangKamiController extends CI_Controller
     }
     public function update($table)
     {
-        // Sanitize the input to avoid any security vulnerabilities
-        //$table = $this->security->xss_clean($table);
-
+        
         $id = $this->input->post('id');
         $data = array();
 
