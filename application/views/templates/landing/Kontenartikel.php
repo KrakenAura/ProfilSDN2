@@ -10,69 +10,84 @@
                 </div>
             </div>
         </header>
-        <!DOCTYPE html>
-<html lang="en">
-  <style>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <title>Web Sekolah SD</title>
-  <style>
-    /* Gaya CSS Anda di sini */
-  </style>
-</head>
 <body>
   <div class="container mt-5">
     <div class="row">
       <!-- Daftar artikel -->
-      <div class="col-md-6">
+      <div class="col-md-10">
         <div class="article">
-          <h2><a href="#" class="article-link" data-id="1">Berita Terbaru</a></h2>
-          <p>Informasi tentang acara lomba menulis yang berhasil dimenangkan oleh siswa-siswi sekolah kami. Selamat kepada para pemenang!</p>
+          <h2><a href="#" class="article-link" data-id="1">Berita</a></h2>
+          <p>Berita Kegiatan SD Negeri 2 Mulyoagung</p>
         </div>
       </div>
-      <!-- Tambahkan artikel lainnya di sini -->
-    </div>
-  </div>
-
-  <div class="modal" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="articleModalLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="articleContent">
+      </div>
+      </div>
+      <body>
+  <div class="container mt-10">
+    <div class="row">
+      <!-- Daftar artikel -->
+      <div class="col-md-10">
+        <div class="article">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="<?php echo base_url('assets/Resource/artikel/')?>unsplash-2.jpg" class="img-fluid float-end" style="width: 300px">
+            </div>
+            <div class="col-md-10">
+              <h2><a href="#" class="article-link" data-id="1">Berita</a></h2>
+              <p>Berita Kegiatan SD Negeri 2 Mulyoagung</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  
 
-  <script>
-    const articleLinks = document.querySelectorAll('.article-link');
+  <!-- ...Script dan Modal lainnya tetap di sini... -->
 
-    articleLinks.forEach(link => {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const articleId = this.getAttribute('data-id');
-        const articleTitle = this.textContent;
-        const articleContent = "Konten artikel #" + articleId; // Ganti ini dengan konten artikel yang sesuai
-
-        const modalTitle = document.getElementById('articleModalLabel');
-        const modalContent = document.getElementById('articleContent');
-
-        modalTitle.textContent = articleTitle;
-        modalContent.textContent = articleContent;
-
-        const articleModal = new bootstrap.Modal(document.getElementById('articleModal'));
-        articleModal.show();
-      });
-    });
-  </script>
+  <style>
+    /* Gaya untuk gambar di artikel */
+    .article-image {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </body>
-</html>
+
+
+  <style>
+    /* Gaya untuk bagian artikel */
+    .article {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f7f7f7;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+    }
+    .article h2 {
+      color: #333;
+    }
+    .article p {
+      color: #666;
+    }
+
+    /* Gaya untuk tabel artikel terkait */
+    .related-articles {
+      width: 100%;
+      margin-top: 15px;
+    }
+    .related-articles th {
+      font-weight: bold;
+    }
+    .related-articles td {
+      padding: 8px;
+    }
+    .related-articles a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+  
+  
+
+</body>

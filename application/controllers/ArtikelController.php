@@ -26,4 +26,11 @@ class ArtikelController extends CI_Controller
         $this->load->view('/templates/landing/artikel');
         $this->load->view('/templates/landing/footer');
     }
+    public function artikel(){
+        
+        $this->load->view('/templates/landing/header');
+        $this->load->view('/templates/landing/navbar');
+        $this->load->view('/templates/landing/Kontenartikel');
+        $this->load->view('/templates/landing/footer');
+    }
 }

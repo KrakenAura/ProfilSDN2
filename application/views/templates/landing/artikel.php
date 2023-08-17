@@ -11,43 +11,7 @@
             </div>
         </header>
         <!DOCTYPE html>
-<html lang="en">
-  <style>
 
-
-  </style>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <title>Artikel SDN 2 Mulyoagung Malang</title>
-</head>
-<body>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-lg-8">
-        <article>
-          <h1 class="mb-3">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</h1>
-
-        </article>
-      </div>
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Artikel Terkait</h5>
-            <ul class="list-unstyled">
-              <li><a href="#">Eksplorasi Seni di SDN 2 Mulyoagung</a></li>
-              <li><a href="#">Menjadi Kreatif dengan Sains di Sekolah Dasar</a></li>
-              <li><a href="#">Pentingnya Perpustakaan di Lingkungan Sekolah</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <html></html>
-</body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +21,7 @@
   <link rel="stylesheet" href="styles.css">
   <title>Web Sekolah SD</title>
   <style>
-    /* Style untuk bagian artikel */
+    /* Gaya untuk bagian artikel */
     .article {
       margin-bottom: 30px;
       padding: 20px;
@@ -74,37 +38,75 @@
   </style>
 </head>
 <body>
-  <div class="container mt-">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8">
+        <article class="article">
+          <h1 class="mb-3">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</h1>
+          <p>Isi artikel yang menarik dan informatif.</p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Eksplorasi Pembelajaran SDN 2 Mulyoagung</h5>
+            <ul class="list-unstyled">
+              <li><a href="<?= base_url('/index.php/ArtikelController/artikel')?>">Berita</a></li>
+              <li><a href="<?= base_url('/index.php/ArtikelController/artikel')?>">Informasi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags, links to stylesheets, title, and inline styles -->
+</head>
+<body>
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <div class="article">
-          <h2>Berita Terbaru</h2>
-          <p>Informasi tentang acara lomba menulis yang berhasil dimenangkan oleh siswa-siswi sekolah kami. Selamat kepada para pemenang!</p>
-        </div>
+        <article class="article">
+          <h2>Berita</h2>
+          <p>Informasi tentang acara lomba menulis yang berhasil dimenangkan oleh siswa-siswi sekolah kami. Selamat kepada para pemenang! fjhwejviojopkocpojvojpokoasopokfoisajvasjvnjnvnaoijikasvjijaijvia</p>
+        </article>
       </div>
+
       <div class="col-md-6">
-        <div class="article">
-          <h2>Kegiatan Sosial dan kemanusian</h2>
-          <p>Informasi mengenai kegiatan amal, sosial, atau pengabdian masyarakat yang dilakukan oleh siswa atau sekolah sebagai bagian dari pendidikan karakter..</p>
-        </div>
+        <article class="article">
+          <h2>Informasi</h2>
+          <p>Tips untuk membantu siswa mengatasi rasa gugup sebelum ujian serta informasi penting tentang jadwal ulangan dan libur sekolah halo semuanya  uefbjijnenfuemfojiflinfkeknkemfkoiqngokqngnqoijgo</p>
+        </article>
       </div>
-      <div class="col-md-6">
-        <div class="article">
-          <h2>Program Pembelajaran</h2>
-          <p>Program pembelajaran kami mengedepankan pendekatan berbasis proyek yang melibatkan siswa dalam eksplorasi dan interaksi langsung dengan materi pelajaran. Siswa belajar sambil bermain!</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="article">
-          <h2>Tips dan Informasi</h2>
-          <p>Tips untuk membantu siswa mengatasi rasa gugup sebelum ujian, serta informasi penting tentang jadwal ulangan dan libur sekolah.</p>
-        </div>
-      </div>
-    </div class="col-md-6">
-    <div class="article">
-      <h2> cerita inspiratif</h2>
-      <p> ketika aku merindukanmu aku hanya bisa terdiam dan merenung ? apa kabar kamu disana semoga kita baik baik saja ya <p>
+    </div>
   </div>
 </body>
+</html>
+
+<Style>.article {
+  height: 100%; /* Set tinggi artikel agar sama */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.article p {
+  color: #666;
+}
+Dalam gaya CSS di atas, saya menambahkan properti height: 100%; pada elemen dengan kelas article untuk memastikan bahwa kedua artikel memiliki tinggi yang sama. Selain itu, saya menggunakan display: flex; untuk mengatur tata letak artikel sebagai flex container dengan arah kolom (flex-direction: column;) dan menggunakan justify-content: space-between; untuk memastikan ada ruang di antara judul dan isi artikel.
+
+Pastikan Anda memasukkan kode CSS tersebut dalam tag <style> yang telah Anda gunakan di <head>. Dengan perbaikan ini, kedua artikel harus memiliki lebar dan tinggi yang sama, serta tampilan yang sesuai dengan harapan Anda.
+
+
+
+
+
+</Style>
+
 
 </html>
