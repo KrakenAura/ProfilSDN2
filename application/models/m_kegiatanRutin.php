@@ -20,4 +20,24 @@ class m_kegiatanRutin extends CI_Model
         $query = $this->db->get_where('kegiatan_rutin', array('id' => $id))->row();
         return $query;
     }
+    public function input($data)
+    {
+        $this->db->insert('kegiatan_rutin', $data);
+    }
+    public function hapus($where)
+    {
+        $this->db->where($where);
+        $this->db->delete('kegiatan_rutin');
+    }
+    public function getByID($id)
+    {
+        $this->db->where('id', $id);
+        $query = $this->db->get('kegiatan_rutin');
+
+        if ($query->num_rows() > 0) {
+            return $query->row();
+        } else {
+            return null;
+        }
+    }
 }
