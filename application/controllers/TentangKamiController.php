@@ -24,6 +24,7 @@ class TentangKamiController extends CI_Controller
         $data['visi'] = $this->m_visimisi->tampil_data('visi')->result();
         $data['misi'] = $this->m_visimisi->tampil_data('misi')->result();
         $data['profil_sekolah'] = $this->m_profilSekolah->tampil_data()->result();
+        $data['struktur_organisasi'] = $this->m_strukturOrganisasi->tampil_data()->result();
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/about', $data);

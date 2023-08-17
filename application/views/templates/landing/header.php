@@ -13,8 +13,12 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?= base_url('assets/Home/') ?>css/styles.css" rel="stylesheet" />
+    <script src="<?= base_url('assets/Home/') ?>js/scripts.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
