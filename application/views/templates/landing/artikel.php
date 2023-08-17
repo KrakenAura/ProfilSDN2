@@ -46,35 +46,7 @@
       </div>
     </div>
   </div>
-
-  <div class="container mt-5">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Judul Artikel</th>
-          <th scope="col">Tanggal</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td><a href="#">Eksplorasi Kreativitas dan Pembelajaran di SDN 2 Mulyoagung Malang</a></td>
-          <td>2023-08-15</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td><a href="#">Mengenal Lebih Dekat SDN 2 Mulyoagung: Tempat Berkembangnya Bakat Anak</a></td>
-          <td>2023-08-16</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td><a href="#">Memahami Metode Pembelajaran Inovatif di SDN 2 Mulyoagung</a></td>
-          <td>2023-08-17</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <html></html>
 </body>
 <!DOCTYPE html>
 <html lang="en">
