@@ -33,7 +33,7 @@
               <img src="<?php echo base_url('assets/Resource/artikel/')?>unsplash-2.jpg" class="img-fluid float-end" style="width: 300px">
             </div>
             <div class="col-md-10">
-              <h2><a href="#" class="article-link" data-id="1">Berita</a></h2>
+              <h2><a href="#" class="article-link" data-id="1">berita isi dan keseluruhan</a></h2>
               <p>Berita Kegiatan SD Negeri 2 Mulyoagung</p>
             </div>
           </div>
