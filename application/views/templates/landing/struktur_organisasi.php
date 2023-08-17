@@ -60,7 +60,6 @@
         <div class="container">
             <div class="row g-4">
                 <?php foreach ($struktur_organisasi as $data_struktur) : ?>
-                    <!-- <div class="col-md-6 col-lg-3"> -->
                     <div class="col-lg-3">
                         <div class="card bg-light">
                             <div class="card-body text-center">
@@ -71,12 +70,7 @@
                                 <p class="card-text text-muted mt-1 mb-4" style="font-size: 1em;">NIP : <?php echo $data_struktur->nip ?></p>
                                 <br>
                                 <br>
-                                <!-- <button class="btn btn-primary btn-overlay">View Profile</button> -->
-                                <!-- <?php echo anchor('index.php/StrukturOrganisasiController/detail', $data_struktur->id, '<button class="btn btn-primary btn-overlay">View Profile</button>') ?> -->
-                                <!-- <button class="btn btn-primary btn-overlay">View Profile</button> -->
                                 <?php echo anchor('index.php/StrukturOrganisasiController/detail/' . $data_struktur->id, '<button class="btn btn-secondary btn-overlay">Detail Guru</button>') ?>
-                                <!-- <?php echo anchor('index.php/StrukturOrganisasiController/detail/' . $data_struktur->id, '<h2 class="bg-light p-2" style="color: #616A6B">Detail Guru</h2>') ?> -->
-
                             </div>
                         </div>
                     </div>

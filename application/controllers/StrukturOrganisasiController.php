@@ -50,9 +50,6 @@ class StrukturOrganisasiController extends CI_Controller
     public function update()
     {
         $id = $this->input->post('id');
-        // $nama_kepsek = $this->input->post('nama_kepsek');
-        // $foto = $_FILES['foto'];
-        // $sambutan = $this->input->post('sambutan');
         $nama = $this->input->post('nama');
         $nip = $this->input->post('nip');
         $jabatan = $this->input->post('jabatan');
@@ -61,19 +58,26 @@ class StrukturOrganisasiController extends CI_Controller
         $jenis_kelamin = $this->input->post('jenis_kelamin');
         $email = $this->input->post('email');
         $foto = $_FILES['foto'];
-        if ($foto = '') {
-        } else {
+
+        // Check if a file is uploaded
+        if (!empty($_FILES['foto']['name'])) {
             $config['upload_path'] = './assets/Resource/struktur_organisasi';
             $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload', $config);
+
             if (!$this->upload->do_upload('foto')) {
                 echo "Upload Gagal";
                 die();
             } else {
                 $foto = $this->upload->data('file_name');
             }
+        } else {
+            // No file uploaded, keep the existing value
+            $existingData = $this->m_strukturOrganisasi->getById($id); // Assuming this method fetches existing data
+            $foto = $existingData->foto;
         }
+
         $data = array(
             'nama' => $nama,
             'nip' => $nip,
@@ -92,6 +96,7 @@ class StrukturOrganisasiController extends CI_Controller
         $this->m_strukturOrganisasi->update($where, $data, 'struktur_organisasi');
         redirect('index.php/StrukturOrganisasiController/index');
     }
+
     public function tambah()
     {
         $nama = $this->input->post('nama');
