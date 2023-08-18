@@ -1,61 +1,46 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class KegiatanRutinController extends CI_Controller
+class EkstrakulikulerController extends CI_Controller
 {
-
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     *	- or -
-     * 		http://example.com/index.php/welcome/index
-     *	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see https://codeigniter.com/userguide3/general/urls.html
-     */
     public function index()
     {
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data()->result();
+        $data['ekstrakulikuler'] = $this->m_ekstrakulikuler->tampil_data()->result();
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/kegiatan', $data);
+        $this->load->view('/templates/landing/ekstrakulikuler', $data);
         $this->load->view('/templates/landing/footer');
     }
     public function dashboard()
     {
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data()->result();
+        $data['ekstrakulikuler'] = $this->m_ekstrakulikuler->tampil_data()->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
-        $this->load->view('/templates/dashboard/database/kegiatan_rutin/kegiatan_rutin', $data);
+        $this->load->view('/templates/dashboard/database/ekstrakulikuler/ekstrakulikuler', $data);
         $this->load->view('/templates/dashboard/footer');
     }
     public function detail($id)
     {
-        $this->load->model('m_kegiatanRutin');
-        $detail = $this->m_kegiatanRutin->detail_data($id);
+        $this->load->model('m_ekstrakulikuler');
+        $detail = $this->m_ekstrakulikuler->detail_data($id);
         $data['detail'] = $detail;
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/detail_kegiatan', $data);
+        $this->load->view('/templates/landing/detail_ekstrakulikuler', $data);
         $this->load->view('/templates/landing/footer');
     }
     public function tambah()
     {
-        $judul_kegiatan = $this->input->post('judul_kegiatan');
-        $deskripsi_singkat = $this->input->post('deskripsi_singkat');
+        $nama = $this->input->post('nama');
         $deskripsi = $this->input->post('deskripsi');
+        $manfaat = $this->input->post('manfaat');
         $jadwal = $this->input->post('jadwal');
+
         $foto = $_FILES['foto'];
         if ($foto = '') {
         } else {
-            $config['upload_path'] = './assets/Resource/kegiatan_rutin';
+            $config['upload_path'] = './assets/Resource/ekstrakulikuler';
             $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload', $config);
@@ -67,42 +52,46 @@ class KegiatanRutinController extends CI_Controller
             }
         }
         $data = array(
-            'judul_kegiatan' => $judul_kegiatan,
-            'deskripsi_singkat' => $deskripsi_singkat,
+            'nama' => $nama,
             'deskripsi' => $deskripsi,
+            'manfaat' => $manfaat,
             'jadwal' => $jadwal,
             'foto' => $foto
         );
-        $this->m_kegiatanRutin->input($data);
-        redirect('index.php/KegiatanRutinController/dashboard');
+
+        $this->m_ekstrakulikuler->input($data);
+        redirect('index.php/EkstrakulikulerController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
-        $this->m_kegiatanRutin->hapus($where);
-        redirect('index.php/KegiatanRutinController/dashboard');
+        $this->m_ekstrakulikuler->hapus($where);
+        redirect('index.php/EkstrakulikulerController/dashboard');
     }
     public function edit($id)
     {
         $where = array('id' => $id);
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->edit($where, 'kegiatan_rutin')->result();
+        $data['ekstrakulikuler'] = $this->m_ekstrakulikuler->edit($where, 'ekstrakulikuler')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
-        $this->load->view('/templates/dashboard/database/kegiatan_rutin/edit', $data);
+        $this->load->view('/templates/dashboard/database/ekstrakulikuler/edit', $data);
         $this->load->view('/templates/dashboard/footer');
     }
     public function update()
     {
         $id = $this->input->post('id');
-        $judul_kegiatan = $this->input->post('judul_kegiatan');
-        $deskripsi_singkat = $this->input->post('deskripsi_singkat');
+        $nama = $this->input->post('nama');
         $deskripsi = $this->input->post('deskripsi');
+        $manfaat = $this->input->post('manfaat');
         $jadwal = $this->input->post('jadwal');
         $foto = $_FILES['foto'];
 
+        // Get the existing data by ID
+        $existingData = $this->m_ekstrakulikuler->getByID($id);
+
         // Check if a file is uploaded
         if (!empty($_FILES['foto']['name'])) {
-            $config['upload_path'] = './assets/Resource/kegiatan_rutin';
+            $config['upload_path'] = './assets/Resource/ekstrakulikuler';
             $config['allowed_types'] = 'jpg|png|jpeg';
 
             $this->load->library('upload', $config);
@@ -114,16 +103,14 @@ class KegiatanRutinController extends CI_Controller
                 $foto = $this->upload->data('file_name');
             }
         } else {
-            // No file uploaded, keep the existing value
-            $existingData = $this->m_kegiatanRutin->getById($id); // Assuming this method fetches existing data
             $foto = $existingData->foto;
         }
 
         $data = array(
-            'judul_kegiatan' => $judul_kegiatan,
-            'deskripsi_singkat' => $deskripsi_singkat,
+            'nama' => $nama,
             'deskripsi' => $deskripsi,
             'jadwal' => $jadwal,
+            'manfaat' => $manfaat,
             'foto' => $foto
         );
 
@@ -131,7 +118,7 @@ class KegiatanRutinController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_kegiatanRutin->update($where, $data, 'kegiatan_rutin');
-        redirect('index.php/KegiatanRutinController/dashboard');
+        $this->m_ekstrakulikuler->update($where, $data, 'ekstrakulikuler');
+        redirect('index.php/EkstrakulikulerController/dashboard');
     }
 }
