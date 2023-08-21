@@ -25,8 +25,9 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('StrukturOrganisasiController/index') ?>">Struktur Organisasi</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('KegiatanRutinController/index') ?>">Kegiatan Rutin</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('EkstrakulikulerController/index') ?>">Ekstrakuliker</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('PrestasiController/index') ?>">Prestasi</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/post') ?>">Artikel</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('HomeController/contact') ?>">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo base_url('ContactController/index') ?>">Kontak</a></li>
                 </ul>
             </div>
         </div>

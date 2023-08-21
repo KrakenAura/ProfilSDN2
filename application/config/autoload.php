@@ -138,5 +138,7 @@ $autoload['model'] = array(
     'm_visimisi',
     'm_profilSekolah',
     'm_kegiatanRutin',
-    'm_ekstrakulikuler'
+    'm_ekstrakulikuler',
+    'm_contact',
+    'm_prestasi'
 );

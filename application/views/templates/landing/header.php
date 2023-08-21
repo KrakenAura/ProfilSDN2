@@ -19,6 +19,11 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="<?= base_url('assets/Home/') ?>css/styles.css" rel="stylesheet" />
     <script src="<?= base_url('assets/Home/') ?>js/scripts.js"></script>
+
+    <!-- CSS Data Tables-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,7 +40,7 @@
         }
     </style>
     <style>
-        
+
     </style>
 
 </head>
