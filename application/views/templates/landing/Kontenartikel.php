@@ -35,6 +35,7 @@
             <div class="col-md-10">
               <h2><a href="#" class="article-link" data-id="1">berita isi dan keseluruhan</a></h2>
               <p>Berita Kegiatan SD Negeri 2 Mulyoagung</p>
+              <img src="<?= base_url ('assets/Resource/artikel/person_fill_icon_159457.png')?>" style="max-width:5%">
             </div>
           </div>
         </div>
