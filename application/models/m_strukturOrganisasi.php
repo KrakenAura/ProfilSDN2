@@ -24,4 +24,9 @@ class m_strukturOrganisasi extends CI_Model
         $query = $this->db->get_where('struktur_organisasi', array('id' => $id))->row();
         return $query;
     }
+    public function hapus($where)
+    {
+        $this->db->where($where);
+        $this->db->delete('struktur_organisasi');
+    }
 }

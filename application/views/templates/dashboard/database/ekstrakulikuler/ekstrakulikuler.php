@@ -7,13 +7,15 @@
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
-                                    <th class="col-1 text-center" style="width: 10%;">No</th>
-                                    <th class="col-2 text-center" style="width: 15%;">Nama Ekstrakulikuler</th>
-                                    <th class="col-3 text-center" style="width: 15%;">Deskripsi</th>
-                                    <th class="col-4 text-center" style="width: 15%;">Manfaat</th>
-                                    <th class="col-5 text-center" style="width: 25%;">Judul</th>
-                                    <th class="col-6 text-center" style="width: 15%;">Foto</th>
+                                    <th class="col-1 text-center" style="width: 8%;">No</th>
+                                    <th class="col-2 text-center" style="width: 18%;">Nama Ekstrakulikuler</th>
+                                    <th class="col-3 text-center" style="width: 18%;">Deskripsi</th>
+                                    <th class="col-4 text-center" style="width: 18%;">Manfaat</th>
+                                    <th class="col-5 text-center" style="width: 18%;">Jadwal</th>
+                                    <th class="col-6 text-center" style="width: 9%;">Foto</th>
+                                    <th class="col-7 text-center" style="width: 18%;">Action</th>
                                 </tr>
+
                             </thead>
                             <tbody>
                                 <?php
@@ -21,11 +23,11 @@
                                 foreach ($ekstrakulikuler as $data_ekstrakulikuler) : ?>
                                     <tr>
                                         <td class="text-center"><?php echo $no++ ?></td>
-                                        <td class="text-center"><img src="<?= base_url('assets/Resource/ekstrakulikuler/') ?><?php echo $data_ekstrakulikuler->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->nama ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->deskripsi ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->manfaat ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->jadwal ?></td>
+                                        <td class="text-center"><img src="<?= base_url('assets/Resource/ekstrakulikuler/') ?><?php echo $data_ekstrakulikuler->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                         <td class="text-center">
                                             <?php echo anchor(
                                                 '/index.php/EkstrakulikulerController/hapus/' . $data_ekstrakulikuler->id,

@@ -35,7 +35,7 @@
                                 <td class="text-center border"><?php echo $data_prestasi->tahun ?></td>
                                 <td class="text-center border"><?php echo $data_prestasi->jenis ?></td>
                                 <td class="text-center border">
-                                    <button class="btn btn-primary">Your Button Text</button>
+                                    <?php echo anchor('index.php/PrestasiController/detail/' . $data_prestasi->id, '<button class="btn btn-secondary btn-sm me-3 mb-3">Detail</button>') ?>
                                 </td>
                             </tr>
                         <?php endforeach ?>

@@ -26,6 +26,12 @@
                                         <td class="text-center border"><?php echo $data_sosmed->platform ?></td>
                                         <td class="text-center border"><?php echo $data_sosmed->kontak ?></td>
                                         <td class="text-center border"><?php echo $data_sosmed->link ?></td>
+                                        <td>
+                                            <?php echo anchor(
+                                                '/index.php/ContactController/hapus/' . $data_sosmed->id,
+                                                '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
+                                            ) ?>
+                                        </td>
                                         <td class="text-center border">
                                             <?php echo anchor(
                                                 '/index.php/ContactController/edit/' . $data_sosmed->id,

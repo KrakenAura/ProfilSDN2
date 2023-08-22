@@ -63,4 +63,59 @@ class ContactController extends CI_Controller
         $this->m_contact->input($data);
         redirect('index.php/ContactController/dashboard');
     }
+    public function hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->m_contact->hapus($where);
+        redirect('index.php/ContactController/dashboard');
+    }
+    public function update()
+    {
+        $id = $this->input->post('id');
+        $platform = $this->input->post('platform');
+        $kontak = $this->input->post('kontak');
+        $link = $this->input->post('link');
+        $icon = $_FILES['icon'];
+
+        if (!empty($_FILES['icon']['name'])) {
+            $config['upload_path'] = './assets/Resource/iconSosmed';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('icon')) {
+                echo "Upload Gagal";
+                die();
+            } else {
+                $icon = $this->upload->data('file_name');
+            }
+        } else {
+            // No file uploaded, keep the existing value
+            $existingData = $this->m_contact->getById($id); // Assuming this method fetches existing data
+            $icon = $existingData->icon;
+        }
+
+        $data = array(
+            'platform' => $platform,
+            'kontak' => $kontak,
+            'link' => $link,
+            'icon' => $icon
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_contact->update($where, $data, 'sosial_media');
+        redirect('index.php/ContactController/dashboard');
+    }
+    public function edit($id)
+    {
+        $where = array('id' => $id);
+        $data['sosial_media'] = $this->m_contact->edit($where, 'sosial_media')->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/kontak/edit', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
 }

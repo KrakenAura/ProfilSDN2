@@ -25,7 +25,6 @@ class StrukturOrganisasiController extends CI_Controller
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/struktur_organisasi', $data);
-
         $this->load->view('/templates/landing/footer');
     }
     public function dashboard()
@@ -94,7 +93,7 @@ class StrukturOrganisasiController extends CI_Controller
         );
 
         $this->m_strukturOrganisasi->update($where, $data, 'struktur_organisasi');
-        redirect('index.php/StrukturOrganisasiController/index');
+        redirect('index.php/StrukturOrganisasiController/dashboard');
     }
 
     public function tambah()
@@ -145,5 +144,11 @@ class StrukturOrganisasiController extends CI_Controller
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/detail_guru', $data);
         $this->load->view('/templates/landing/footer');
+    }
+    public function hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->m_strukturOrganisasi->hapus($where);
+        redirect('index.php/StrukturOrganisasiController/dashboard');
     }
 }
