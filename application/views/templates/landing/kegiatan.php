@@ -12,21 +12,21 @@
     </header>
 
     <div class="container">
-        <hr class="my-4" />
         <h2 class="mb-4">Kegiatan Rutin SD Negeri 2 Mulyoagung</h2>
+        <hr class="my-4" />
         <?php foreach ($kegiatan_rutin as $data_kegiatan) : ?>
             <div class="row mb-3">
                 <div class="col">
                     <div class="card border bg-light rounded">
                         <div class="card-body">
                             <div class="row">
-                                <h3 class="card-title mb-1">
+                                <h3 class="card-title mb-3">
                                     <?php echo $data_kegiatan->judul_kegiatan ?>
                                 </h3>
                             </div>
                             <div class="row">
                                 <div class="col-lg-3 col-md-4 col-12 d-flex flex-column align-items-center position-relative">
-                                    <img src="<?= base_url('assets/Resource/kegiatan_rutin/' . $data_kegiatan->foto) ?>" class="border border-3 border-gray mb-4 img-fluid" style="max-width: 95%;" alt="Kegiatan Foto">
+                                    <img src="<?= base_url('assets/Resource/kegiatan_rutin/' . $data_kegiatan->foto) ?>" class="border border-3 border-gray mb-4 img-fluid" style="max-width: 40%;" alt="Kegiatan Foto">
                                 </div>
                                 <div class="col-lg-9 col-md-8 col-12 position-relative">
                                     <p><?php echo $data_kegiatan->deskripsi_singkat ?></p>

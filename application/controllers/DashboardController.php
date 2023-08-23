@@ -34,4 +34,50 @@ class DashboardController extends CI_Controller
         $this->load->view('/templates/dashboard/sambutan', $data);
         $this->load->view('/templates/dashboard/footer');
     }
+    public function profil()
+    {
+        $this->load->model('m_auth');
+        $data['auth'] = $this->m_auth->detail_data();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/account', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    // Controller method
+    public function auth()
+    {
+        $this->load->model('m_auth');
+        $data['auth'] = $this->m_auth->detail_data();
+
+        $this->load->view('/templates/landing/header');
+        $this->load->view('/templates/landing/navbar');
+        $this->load->view('/templates/landing/login', $data);
+        $this->load->view('/templates/landing/footer');
+    }
+
+
+
+
+
+    // Controller method to update the profile
+    public function update_profile()
+    {
+        $username = $this->input->post('username');
+
+        $this->load->model('m_auth');
+        $this->m_auth->update_username($username);
+
+        redirect('/DashboardController/index');
+    }
+
+    // Controller method to update the password
+    public function update_password()
+    {
+        $new_password = $this->input->post('new_password');
+
+        $this->load->model('m_auth');
+        $this->m_auth->update_password($new_password);
+
+        redirect('/DashboardController/index');
+    }
 }

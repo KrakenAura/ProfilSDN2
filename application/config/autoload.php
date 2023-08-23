@@ -140,5 +140,7 @@ $autoload['model'] = array(
     'm_kegiatanRutin',
     'm_ekstrakulikuler',
     'm_contact',
-    'm_prestasi'
+    'm_prestasi',
+    'm_artikel',
+    'm_auth'
 );

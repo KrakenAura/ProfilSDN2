@@ -21,16 +21,22 @@ class ArtikelController extends CI_Controller
      */
     public function index()
     {
+        $data['artikel'] = $this->m_artikel->tampil_data()->result();
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/artikel');
+        $this->load->view('/templates/landing/artikel/artikel', $data);
         $this->load->view('/templates/landing/footer');
     }
-    public function artikel(){
-        
+    public function artikel($id)
+    {
+
+        //$data['artikel'] = $this->m_artikel->tampil_data()->result();
+        $this->load->model('m_artikel');
+        $artikel = $this->m_artikel->detail_data($id);
+        $data['artikel'] = $artikel;
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/Kontenartikel');
+        $this->load->view('/templates/landing/artikel/isiArtikel', $data);
         $this->load->view('/templates/landing/footer');
     }
 }
