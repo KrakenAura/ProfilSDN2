@@ -6,6 +6,7 @@ class EkstrakulikulerController extends CI_Controller
     public function index()
     {
         $data['ekstrakulikuler'] = $this->m_ekstrakulikuler->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Ekstrakulikuler');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/ekstrakulikuler', $data);
@@ -24,6 +25,7 @@ class EkstrakulikulerController extends CI_Controller
         $this->load->model('m_ekstrakulikuler');
         $detail = $this->m_ekstrakulikuler->detail_data($id);
         $data['detail'] = $detail;
+        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');

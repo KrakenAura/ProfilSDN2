@@ -22,6 +22,7 @@ class KegiatanRutinController extends CI_Controller
     public function index()
     {
         $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/kegiatan', $data);
@@ -40,6 +41,7 @@ class KegiatanRutinController extends CI_Controller
         $this->load->model('m_kegiatanRutin');
         $detail = $this->m_kegiatanRutin->detail_data($id);
         $data['detail'] = $detail;
+        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');

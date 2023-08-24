@@ -22,6 +22,7 @@ class ArtikelController extends CI_Controller
     public function index()
     {
         $data['artikel'] = $this->m_artikel->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Artikel');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/artikel/artikel', $data);
@@ -34,6 +35,7 @@ class ArtikelController extends CI_Controller
         $this->load->model('m_artikel');
         $artikel = $this->m_artikel->detail_data($id);
         $data['artikel'] = $artikel;
+        $data['hero'] = $this->m_hero->tampil_data('Artikel');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/artikel/isiArtikel', $data);

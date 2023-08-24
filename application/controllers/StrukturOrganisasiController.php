@@ -22,6 +22,7 @@ class StrukturOrganisasiController extends CI_Controller
     public function index()
     {
         $data['struktur_organisasi'] = $this->m_strukturOrganisasi->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Struktur Organisasi');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/struktur_organisasi', $data);
@@ -139,6 +140,7 @@ class StrukturOrganisasiController extends CI_Controller
         $this->load->model('m_strukturOrganisasi');
         $detail = $this->m_strukturOrganisasi->detail_data($id);
         $data['detail'] = $detail;
+        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');

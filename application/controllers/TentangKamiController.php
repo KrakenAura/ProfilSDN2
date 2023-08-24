@@ -25,6 +25,7 @@ class TentangKamiController extends CI_Controller
         $data['misi'] = $this->m_visimisi->tampil_data('misi')->result();
         $data['profil_sekolah'] = $this->m_profilSekolah->tampil_data()->result();
         $data['struktur_organisasi'] = $this->m_strukturOrganisasi->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Tentang Kami');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/about', $data);
@@ -49,7 +50,7 @@ class TentangKamiController extends CI_Controller
     }
     public function update($table)
     {
-        
+
         $id = $this->input->post('id');
         $data = array();
 

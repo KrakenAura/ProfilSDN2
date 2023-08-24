@@ -22,6 +22,7 @@ class ContactController extends CI_Controller
     public function index()
     {
         $data['sosial_media'] = $this->m_contact->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Kontak');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/contact', $data);

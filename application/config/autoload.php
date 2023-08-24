@@ -142,5 +142,6 @@ $autoload['model'] = array(
     'm_contact',
     'm_prestasi',
     'm_artikel',
-    'm_auth'
+    'm_auth',
+    'm_hero'
 );

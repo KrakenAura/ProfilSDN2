@@ -12,7 +12,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="index.html">
+                        <a class="sidebar-link" href="<?= base_url('/index.php/DashboardController/hero') ?>">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Hero</span>
                         </a>
                     </li>
