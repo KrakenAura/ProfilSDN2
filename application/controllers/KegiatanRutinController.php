@@ -42,6 +42,7 @@ class KegiatanRutinController extends CI_Controller
         $detail = $this->m_kegiatanRutin->detail_data($id);
         $data['detail'] = $detail;
         $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
+        $data['galeri_kegiatan'] = $this->m_kegiatanRutin->tampil_galeri($id);
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
@@ -134,6 +135,44 @@ class KegiatanRutinController extends CI_Controller
         );
 
         $this->m_kegiatanRutin->update($where, $data, 'kegiatan_rutin');
+        redirect('index.php/KegiatanRutinController/dashboard');
+    }
+    public function tambahFoto($id)
+    {
+        $data['galeri_kegiatan'] = $this->m_kegiatanRutin->tampil_galeri($id);
+        $data['id_kegiatan'] = $id;
+
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/kegiatan_rutin/tambahFoto', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function inputFoto()
+    {
+        $id = $this->input->post('id');
+        $id_kegiatan = $this->input->post('id_kegiatan');
+        $foto = $_FILES['foto'];
+        if ($foto = '') {
+        } else {
+            $config['upload_path'] = './assets/Resource/galeri_kegiatan';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')) {
+                echo "Upload Gagal";
+                die();
+            } else {
+                $foto = $this->upload->data('file_name');
+            }
+        }
+        $data = array(
+            'id' => $id,
+            'foto' => $foto,
+            'id_kegiatan' => $id_kegiatan
+        );
+        print_r($data);
+
+        $this->m_kegiatanRutin->input('galeri_kegiatan', $data);
         redirect('index.php/KegiatanRutinController/dashboard');
     }
 }

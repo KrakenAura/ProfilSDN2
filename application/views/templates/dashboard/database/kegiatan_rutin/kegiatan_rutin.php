@@ -27,17 +27,22 @@
                                         <td class="text-center"><?php echo $data_kegiatan_rutin->deskripsi_singkat ?></td>
                                         <td class="text-center"><?php echo $data_kegiatan_rutin->deskripsi ?></td>
                                         <td class="text-center"><?php echo $data_kegiatan_rutin->jadwal ?></td>
-                                        <td class="text-center">
-                                            <?php echo anchor(
-                                                '/index.php/KegiatanRutinController/hapus/' . $data_kegiatan_rutin->id,
-                                                '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
-                                            ) ?>
-                                        </td>
-                                        <td class="text-center">
-                                            <?php echo anchor(
-                                                '/index.php/KegiatanRutinController/edit/' . $data_kegiatan_rutin->id,
-                                                '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
-                                            ) ?>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <?php echo anchor(
+                                                    '/index.php/KegiatanRutinController/hapus/' . $data_kegiatan_rutin->id,
+                                                    '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
+                                                ) ?>
+
+                                                <?php echo anchor(
+                                                    '/index.php/KegiatanRutinController/edit/' . $data_kegiatan_rutin->id,
+                                                    '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
+                                                ) ?>
+                                                <?php echo anchor(
+                                                    '/index.php/KegiatanRutinController/tambahFoto/' . $data_kegiatan_rutin->id,
+                                                    '<div class="btn btn-success btn-sm"><i class="align-middle me-2" data-feather="plus"></i>Tambah Foto</div>'
+                                                ) ?>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>

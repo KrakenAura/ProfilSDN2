@@ -20,9 +20,9 @@ class m_kegiatanRutin extends CI_Model
         $query = $this->db->get_where('kegiatan_rutin', array('id' => $id))->row();
         return $query;
     }
-    public function input($data)
+    public function input($table, $data)
     {
-        $this->db->insert('kegiatan_rutin', $data);
+        $this->db->insert($table, $data);
     }
     public function hapus($where)
     {
@@ -39,5 +39,9 @@ class m_kegiatanRutin extends CI_Model
         } else {
             return null;
         }
+    }
+    public function tampil_galeri($id_kegiatan = NULL)
+    {
+        return $this->db->where('id_kegiatan', $id_kegiatan)->get('galeri_kegiatan')->result();
     }
 }

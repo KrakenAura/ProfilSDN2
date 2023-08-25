@@ -35,5 +35,18 @@
             </div>
         </div>
 
+        <h3 style="padding-left: 4rem;">Galeri Terkait</h3>
+        <div class="row g-1">
+            <?php foreach ($galeri_kegiatan as $data_galeri) : ?>
+                <div class="col-lg-3 col-md-6" style="padding-left: 4rem;">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="<?= base_url('assets/Resource/galeri_kegiatan/' . $data_galeri->foto) ?>" loading="lazy" class="mb-4" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+
 
     </section>

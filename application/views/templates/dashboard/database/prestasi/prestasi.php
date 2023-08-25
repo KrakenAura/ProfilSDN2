@@ -38,7 +38,7 @@
                                             ) ?>
                                             <?php echo anchor(
                                                 '/index.php/PrestasiController/tambahFoto/' . $data_prestasi->id,
-                                                '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="plus"></i>Tambah Foto</div>'
+                                                '<div class="btn btn-success btn-sm"><i class="align-middle me-2" data-feather="plus"></i>Tambah Foto</div>'
                                             ) ?>
 
                                         </div>
