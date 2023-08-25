@@ -11,6 +11,7 @@
                                 <th>Nama Kepala Sekolah</th>
                                 <th>Foto Kepala Sekolah</th>
                                 <th>Sambutan Kepala Sekolah</th>
+                                <th>Action</th>
                             </tr>
                             <?php
                             $no = 1;

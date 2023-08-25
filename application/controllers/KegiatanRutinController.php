@@ -21,7 +21,7 @@ class KegiatanRutinController extends CI_Controller
      */
     public function index()
     {
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data()->result();
+        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data('kegiatan_rutin')->result();
         $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
@@ -30,7 +30,7 @@ class KegiatanRutinController extends CI_Controller
     }
     public function dashboard()
     {
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data()->result();
+        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data('kegiatan_rutin')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/kegiatan_rutin/kegiatan_rutin', $data);
@@ -76,13 +76,13 @@ class KegiatanRutinController extends CI_Controller
             'jadwal' => $jadwal,
             'foto' => $foto
         );
-        $this->m_kegiatanRutin->input($data);
+        $this->m_kegiatanRutin->input('kegiatan_rutin', $data);
         redirect('index.php/KegiatanRutinController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
-        $this->m_kegiatanRutin->hapus($where);
+        $this->m_kegiatanRutin->hapus('kegiatan_rutin', $where);
         redirect('index.php/KegiatanRutinController/dashboard');
     }
     public function edit($id)
@@ -173,6 +173,12 @@ class KegiatanRutinController extends CI_Controller
         print_r($data);
 
         $this->m_kegiatanRutin->input('galeri_kegiatan', $data);
+        redirect('index.php/KegiatanRutinController/dashboard');
+    }
+    public function hapusFoto($id)
+    {
+        $where = array('id' => $id);
+        $this->m_kegiatanRutin->hapus('galeri_kegiatan', $where);
         redirect('index.php/KegiatanRutinController/dashboard');
     }
 }

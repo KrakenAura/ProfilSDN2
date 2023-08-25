@@ -13,9 +13,9 @@
 
     <section class="content">
         <div class="row">
-            <h1 class="mb-4 p-3" style="padding-left: 2rem;"><strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDetail Kegiatan Rutin</strong></h1>
-            <h2 class="mb-4 p-3" style="padding-left: 2rem;">
-                <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<?php echo $detail->nama ?></strong>
+            <h1 class="mb-4 p-3" style="padding-left: 4rem;"><strong>Detail Ekstrakulikuler</strong></h1>
+            <h2 class="mb-4 p-3" style="padding-left: 4rem;">
+                <strong><?php echo $detail->nama ?></strong>
             </h2>
         </div>
         <img src="<?= base_url('assets/Resource/ekstrakulikuler/' . $detail->foto) ?>" class="img-fluid mx-auto d-block mt-4" style="width: 50% ;box-shadow: 5px 5px 20px #A6ACAF;">
@@ -33,5 +33,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <h3 style="padding-left: 4rem;">Galeri Terkait</h3>
+        <div class="row g-1">
+            <?php foreach ($galeri_ekstrakulikuler as $data_galeri) : ?>
+                <div class="col-lg-3 col-md-6" style="padding-left: 4rem;">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="<?= base_url('assets/Resource/galeri_ekstrakulikuler/' . $data_galeri->foto) ?>" loading="lazy" class="mb-4" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
         </div>
     </section>

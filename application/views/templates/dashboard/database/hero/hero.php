@@ -12,6 +12,7 @@
                                 <th>Foto</th>
                                 <th>Judul</th>
                                 <th>Sub Judul</th>
+                                <th>Action</th>
                             </tr>
                             <?php
                             $no = 1;

@@ -2,9 +2,9 @@
 
 class m_ekstrakulikuler extends CI_Model
 {
-    public function tampil_data()
+    public function tampil_data($table)
     {
-        return $this->db->get('ekstrakulikuler');
+        return $this->db->get($table);
     }
     public function edit($where, $table)
     {
@@ -20,14 +20,14 @@ class m_ekstrakulikuler extends CI_Model
         $query = $this->db->get_where('ekstrakulikuler', array('id' => $id))->row();
         return $query;
     }
-    public function input($data)
+    public function input($table, $data)
     {
-        $this->db->insert('ekstrakulikuler', $data);
+        $this->db->insert($table, $data);
     }
-    public function hapus($where)
+    public function hapus($table, $where)
     {
         $this->db->where($where);
-        $this->db->delete('ekstrakulikuler');
+        $this->db->delete($table);
     }
     public function getByID($id)
     {
@@ -39,5 +39,9 @@ class m_ekstrakulikuler extends CI_Model
         } else {
             return null;
         }
+    }
+    public function tampil_galeri($id_ekstrakulikuler = NULL)
+    {
+        return $this->db->where('id_ekstrakulikuler', $id_ekstrakulikuler)->get('galeri_ekstrakulikuler')->result();
     }
 }

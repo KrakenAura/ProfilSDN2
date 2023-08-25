@@ -41,4 +41,22 @@ class ArtikelController extends CI_Controller
         $this->load->view('/templates/landing/artikel/isiArtikel', $data);
         $this->load->view('/templates/landing/footer');
     }
+    public function berita()
+    {
+        $data['artikel'] = $this->m_artikel->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Artikel');
+        $this->load->view('/templates/landing/header');
+        $this->load->view('/templates/landing/navbar');
+        $this->load->view('/templates/landing/artikel/berita', $data);
+        $this->load->view('/templates/landing/footer');
+    }
+    public function informasi()
+    {
+        $data['artikel'] = $this->m_artikel->tampil_data()->result();
+        $data['hero'] = $this->m_hero->tampil_data('Artikel');
+        $this->load->view('/templates/landing/header');
+        $this->load->view('/templates/landing/navbar');
+        $this->load->view('/templates/landing/artikel/informasi', $data);
+        $this->load->view('/templates/landing/footer');
+    }
 }

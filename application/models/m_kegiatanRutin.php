@@ -24,10 +24,10 @@ class m_kegiatanRutin extends CI_Model
     {
         $this->db->insert($table, $data);
     }
-    public function hapus($where)
+    public function hapus($table, $where)
     {
         $this->db->where($where);
-        $this->db->delete('kegiatan_rutin');
+        $this->db->delete($table);
     }
     public function getByID($id)
     {

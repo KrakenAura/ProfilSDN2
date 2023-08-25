@@ -20,7 +20,7 @@
                                     <td>
                                         <div class="btn-group" role="group">
                                             <?php echo anchor(
-                                                '/index.php/PrestasiController/hapus/' . $data_galeri->id,
+                                                '/index.php/PrestasiController/hapusFoto/' . $data_galeri->id,
                                                 '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                             ) ?>
                                         </div>

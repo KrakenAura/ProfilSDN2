@@ -28,4 +28,9 @@ class m_prestasi extends CI_Model
     {
         $this->db->insert($table, $data);
     }
+    public function hapus($table, $where)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
 }

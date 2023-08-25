@@ -102,6 +102,12 @@ class PrestasiController extends CI_Controller
         $this->m_prestasi->input('prestasi', $data);
         redirect('index.php/PrestasiController/dashboard');
     }
+    public function hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->m_prestasi->hapus('prestasi', $where);
+        redirect('index.php/PrestasiController/dashboard');
+    }
     public function tambahFoto($id)
     {
         $data['galeri_prestasi'] = $this->m_prestasi->tampil_galeri($id);
@@ -137,6 +143,12 @@ class PrestasiController extends CI_Controller
         );
 
         $this->m_prestasi->input('galeri_prestasi', $data);
+        redirect('index.php/PrestasiController/dashboard');
+    }
+    public function hapusFoto($id)
+    {
+        $where = array('id' => $id);
+        $this->m_prestasi->hapus('galeri_prestasi', $where);
         redirect('index.php/PrestasiController/dashboard');
     }
 }

@@ -8,11 +8,11 @@
                             <thead>
                                 <tr>
                                     <th class="col-1 text-center" style="width: 8%;">No</th>
+                                    <th class="col-6 text-center" style="width: 9%;">Foto</th>
                                     <th class="col-2 text-center" style="width: 18%;">Nama Ekstrakulikuler</th>
                                     <th class="col-3 text-center" style="width: 18%;">Deskripsi</th>
                                     <th class="col-4 text-center" style="width: 18%;">Manfaat</th>
                                     <th class="col-5 text-center" style="width: 18%;">Jadwal</th>
-                                    <th class="col-6 text-center" style="width: 9%;">Foto</th>
                                     <th class="col-7 text-center" style="width: 18%;">Action</th>
                                 </tr>
 
@@ -23,22 +23,27 @@
                                 foreach ($ekstrakulikuler as $data_ekstrakulikuler) : ?>
                                     <tr>
                                         <td class="text-center"><?php echo $no++ ?></td>
+                                        <td class="text-center"><img src="<?= base_url('assets/Resource/ekstrakulikuler/') ?><?php echo $data_ekstrakulikuler->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->nama ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->deskripsi ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->manfaat ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->jadwal ?></td>
-                                        <td class="text-center"><img src="<?= base_url('assets/Resource/ekstrakulikuler/') ?><?php echo $data_ekstrakulikuler->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
-                                        <td class="text-center">
-                                            <?php echo anchor(
-                                                '/index.php/EkstrakulikulerController/hapus/' . $data_ekstrakulikuler->id,
-                                                '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
-                                            ) ?>
-                                        </td>
-                                        <td class="text-center">
-                                            <?php echo anchor(
-                                                '/index.php/EkstrakulikulerController/edit/' . $data_ekstrakulikuler->id,
-                                                '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
-                                            ) ?>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <?php echo anchor(
+                                                    '/index.php/EkstrakulikulerController/hapus/' . $data_ekstrakulikuler->id,
+                                                    '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
+                                                ) ?>
+
+                                                <?php echo anchor(
+                                                    '/index.php/EkstrakulikulerController/edit/' . $data_ekstrakulikuler->id,
+                                                    '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
+                                                ) ?>
+                                                <?php echo anchor(
+                                                    '/index.php/EkstrakulikulerController/tambahFoto/' . $data_ekstrakulikuler->id,
+                                                    '<div class="btn btn-success btn-sm"><i class="align-middle me-2" data-feather="plus"></i>Tambah Foto</div>'
+                                                ) ?>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>

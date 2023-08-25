@@ -14,6 +14,7 @@
 
 
 <div class="container">
+    <h1 class="mb-4 p-3" style="padding-left: 2rem;"><strong>Artikel Kami</strong></h1>
     <?php foreach ($artikel as $data_artikel) : ?>
         <div class="row mb-3">
             <div class="col">
@@ -60,8 +61,8 @@
                 <div class="card-body">
                     <h5 class="card-title">Eksplorasi Berita dan Informasi SDN 2 Mulyoagung</h5>
                     <ul class="list-unstyled">
-                        <li><a href="<?= base_url('/index.php/ArtikelController/artikel') ?>">Berita</a></li>
-                        <li><a href="<?= base_url('/index.php/ArtikelController/artikel') ?>">Informasi</a></li>
+                        <li><a href="<?= base_url('/index.php/ArtikelController/berita') ?>">Berita</a></li>
+                        <li><a href="<?= base_url('/index.php/ArtikelController/informasi') ?>">Informasi</a></li>
                     </ul>
                 </div>
             </div>
