@@ -13,10 +13,19 @@ class m_prestasi extends CI_Model
     }
     public function tampil_galeri($id_prestasi = NULL)
     {
-        $this->db->where('id_prestasi', $id_prestasi);
-        return $this->db->get('galeri_prestasi');
-
-        // return $this->db->get('galeri_prestasi')->where('id_prestasi', $id_prestasi)->row();
-        //return $this->db->where('id_prestasi', $id_prestasi)->get('galeri_prestasi')->row();
+        return $this->db->where('id_prestasi', $id_prestasi)->get('galeri_prestasi')->result();
+    }
+    public function edit($where, $table)
+    {
+        return $this->db->get_where($table, $where);
+    }
+    public function update($where, $data, $table)
+    {
+        $this->db->where($where);
+        $this->db->update($table, $data);
+    }
+    public function input($table, $data)
+    {
+        $this->db->insert($table, $data);
     }
 }

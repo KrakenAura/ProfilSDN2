@@ -48,10 +48,10 @@
             <p><?php echo $detail->deskripsi ?></p>
         </div>
     </div>
-    <h3>Galeri Terkait</h3>
-    <div class="row g-4">
+    <h3 style="padding-left: 4rem;">Galeri Terkait</h3>
+    <div class="row g-1">
         <?php foreach ($galeri_prestasi as $data_galeri) : ?>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6" style="padding-left: 4rem;">
                 <div class="card bg-light">
                     <div class="card-body text-center">
                         <img src="<?= base_url('assets/Resource/galeri_prestasi/' . $data_galeri->foto) ?>" loading="lazy" class="mb-4" style="width: 100%;">
@@ -60,4 +60,5 @@
             </div>
         <?php endforeach ?>
     </div>
+
 </section>

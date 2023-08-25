@@ -2,7 +2,7 @@
     <div class="wrapper">
         <nav id="sidebar" class="sidebar js-sidebar" style=" width: 75%;">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" href="index.html">
+                <a class="sidebar-brand">
                     <span class="align-middle">Dashboard SD Negeri 2 Mulyoagung</span>
                 </a>
 
@@ -40,6 +40,11 @@
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="<?= base_url('/index.php/EkstrakulikulerController/dashboard') ?>">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Ekstrakulikuler</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="<?= base_url('/index.php/PrestasiController/dashboard') ?>">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Prestasi</span>
                         </a>
                     </li>
                     <li class="sidebar-item">

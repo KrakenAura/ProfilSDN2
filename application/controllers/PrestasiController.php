@@ -35,14 +35,108 @@ class PrestasiController extends CI_Controller
         $this->load->model('m_prestasi');
         $detail = $this->m_prestasi->detail_data($id);
         $data['detail'] = $detail;
-        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
+        $data['hero'] = $this->m_hero->tampil_data('Prestasi');
         $data['galeri_prestasi'] = $this->m_prestasi->tampil_galeri($id);
-
-        print_r($data['galeri_prestasi']);
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/detail_prestasi', $data);
         $this->load->view('/templates/landing/footer');
+    }
+    public function dashboard()
+    {
+        $data['prestasi'] = $this->m_prestasi->tampil_data('prestasi')->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/prestasi/prestasi', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function edit($id)
+    {
+        $where = array('id' => $id);
+        $data['prestasi'] = $this->m_prestasi->edit($where, 'prestasi')->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/prestasi/edit', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function update()
+    {
+        $id = $this->input->post('id');
+        $nama = $this->input->post('nama');
+        $tingkat = $this->input->post('tingkat');
+        $tahun = $this->input->post('tahun');
+        $jenis = $this->input->post('jenis');
+        $deskripsi = $this->input->post('deskripsi');
+
+        $data = array(
+            'nama' => $nama,
+            'tingkat' => $tingkat,
+            'tahun' => $tahun,
+            'jenis' => $jenis,
+            'deskripsi' => $deskripsi
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_prestasi->update($where, $data, 'prestasi');
+        redirect('index.php/PrestasiController/dashboard');
+    }
+    public function tambah()
+    {
+        $nama = $this->input->post('nama');
+        $tingkat = $this->input->post('tingkat');
+        $tahun = $this->input->post('tahun');
+        $jenis = $this->input->post('jenis');
+        $deskripsi = $this->input->post('deskripsi');
+        $data = array(
+            'nama' => $nama,
+            'tingkat' => $tingkat,
+            'tahun' => $tahun,
+            'jenis' => $jenis,
+            'deskripsi' => $deskripsi
+        );
+
+        $this->m_prestasi->input('prestasi', $data);
+        redirect('index.php/PrestasiController/dashboard');
+    }
+    public function tambahFoto($id)
+    {
+        $data['galeri_prestasi'] = $this->m_prestasi->tampil_galeri($id);
+        $data['id_prestasi'] = $id;
+
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/prestasi/tambahFoto', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function inputFoto()
+    {
+        $id = $this->input->post('id');
+        $id_prestasi = $this->input->post('id_prestasi');
+        $foto = $_FILES['foto'];
+        if ($foto = '') {
+        } else {
+            $config['upload_path'] = './assets/Resource/galeri_prestasi';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')) {
+                echo "Upload Gagal";
+                die();
+            } else {
+                $foto = $this->upload->data('file_name');
+            }
+        }
+        $data = array(
+            'id' => $id,
+            'foto' => $foto,
+            'id_prestasi' => $id_prestasi
+        );
+
+        $this->m_prestasi->input('galeri_prestasi', $data);
+        redirect('index.php/PrestasiController/dashboard');
     }
 }
