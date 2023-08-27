@@ -33,7 +33,7 @@
                                 <p><?php echo $data_kegiatan->deskripsi_singkat ?></p>
                                 <p><?php echo $data_kegiatan->jadwal ?></p>
                                 <div class="d-flex justify-content-end">
-                                    <?php echo anchor('index.php/KegiatanRutinController/detail/' . $data_kegiatan->id, '<button class="btn btn-secondary btn-sm me-3 mb-3">Detail Kegiatan</button>') ?>
+                                    <?php echo anchor('KegiatanRutinController/detail/' . $data_kegiatan->id, '<button class="btn btn-secondary btn-sm me-3 mb-3">Detail Kegiatan</button>') ?>
                                 </div>
                             </div>
                         </div>

@@ -43,16 +43,6 @@ class DashboardController extends CI_Controller
         $this->load->view('/templates/dashboard/account', $data);
         $this->load->view('/templates/dashboard/footer');
     }
-    public function auth()
-    {
-        $this->load->model('m_auth');
-        $data['auth'] = $this->m_auth->detail_data();
-
-        $this->load->view('/templates/landing/header');
-        $this->load->view('/templates/landing/navbar');
-        $this->load->view('/templates/landing/login', $data);
-        $this->load->view('/templates/landing/footer');
-    }
     public function hero()
     {
         $data['hero'] = $this->m_hero->tampil_data_dashboard()->result();
@@ -109,30 +99,5 @@ class DashboardController extends CI_Controller
 
         $this->m_hero->update($where, $data, 'hero');
         redirect('index.php/DashboardController/hero');
-    }
-
-
-
-
-    // Controller method to update the profile
-    public function update_profile()
-    {
-        $username = $this->input->post('username');
-
-        $this->load->model('m_auth');
-        $this->m_auth->update_username($username);
-
-        redirect('/DashboardController/index');
-    }
-
-    // Controller method to update the password
-    public function update_password()
-    {
-        $new_password = $this->input->post('new_password');
-
-        $this->load->model('m_auth');
-        $this->m_auth->update_password($new_password);
-
-        redirect('/DashboardController/index');
     }
 }

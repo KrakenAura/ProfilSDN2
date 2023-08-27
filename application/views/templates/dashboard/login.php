@@ -47,7 +47,7 @@
                                             <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
                                         </div>
                                         <div class="d-grid gap-2 mt-3">
-                                            <a href="index.html" class="btn btn-lg btn-primary">Sign in</a>
+                                            <a href="<?php echo base_url('LoginController/aksi_login') ?>" class="btn btn-lg btn-primary">Sign in</a>
                                         </div>
                                     </form>
                                 </div>

@@ -32,7 +32,7 @@
                                     <p><?php echo $data_ekstrakulikuler->deskripsi ?></p>
                                     <p><?php echo $data_ekstrakulikuler->jadwal ?></p>
                                     <div class="d-flex justify-content-end">
-                                        <?php echo anchor('index.php/EkstrakulikulerController/detail/' . $data_ekstrakulikuler->id, '<button class="btn btn-secondary btn-sm me-3 mb-3">Detail Ekstrakulikuler</button>') ?>
+                                        <?php echo anchor('EkstrakulikulerController/detail/' . $data_ekstrakulikuler->id, '<button class="btn btn-secondary btn-sm me-3 mb-3">Detail Ekstrakulikuler</button>') ?>
                                     </div>
                                 </div>
                             </div>

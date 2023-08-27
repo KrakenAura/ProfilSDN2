@@ -15,7 +15,6 @@
                                     <th class="col-5 text-center" style="width: 18%;">Jadwal</th>
                                     <th class="col-7 text-center" style="width: 18%;">Action</th>
                                 </tr>
-
                             </thead>
                             <tbody>
                                 <?php
