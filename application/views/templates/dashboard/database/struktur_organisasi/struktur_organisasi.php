@@ -34,13 +34,13 @@
                                     <td><img src="<?= base_url('assets/Resource/struktur_organisasi/') ?><?php echo $data_struktur->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                     <td>
                                         <?php echo anchor(
-                                            '/index.php/StrukturOrganisasiController/hapus/' . $data_struktur->id,
+                                            '/StrukturOrganisasiController/hapus/' . $data_struktur->id,
                                             '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                         ) ?>
                                     </td>
                                     <td>
                                         <?php echo anchor(
-                                            '/index.php/StrukturOrganisasiController/edit/' . $data_struktur->id,
+                                            '/StrukturOrganisasiController/edit/' . $data_struktur->id,
                                             '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
                                         ) ?>
                                     </td>

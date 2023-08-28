@@ -41,6 +41,14 @@ class TentangKamiController extends CI_Controller
         $this->load->view('/templates/dashboard/database/visi_misi/visi_misi', $data);
         $this->load->view('/templates/dashboard/footer');
     }
+    public function dashboardProfil()
+    {
+        $data['profil_sekolah'] = $this->m_profilSekolah->tampil_data('profil_sekolah')->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/profil_sekolah/profil_sekolah', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
     public function hapus($id, $table)
     {
         $where = array('id' => $id);
@@ -78,6 +86,47 @@ class TentangKamiController extends CI_Controller
             $this->load->view('/templates/dashboard/database/visi_misi/edit_misi', $data);
         }
         $this->load->view('/templates/dashboard/footer');
+    }
+    public function editProfil($id)
+    {
+        $where = array('id' => $id);
+        $data['profil_sekolah'] = $this->m_profilSekolah->edit($where, 'profil_sekolah')->result();
+
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/profil_sekolah/edit', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function updateProfil()
+    {
+        $id = $this->input->post('id');
+        $deskripsi = $this->input->post('deskripsi');
+        $foto = $_FILES['foto'];
+        if ($foto = '') {
+        } else {
+            $config['upload_path'] = './assets/Resource/profil_sekolah';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+
+            $this->load->library('upload', $config);
+            if (!$this->upload->do_upload('foto')) {
+                echo "Upload Gagal";
+                die();
+            } else {
+                $foto = $this->upload->data('file_name');
+            }
+        }
+
+        $data = array(
+            'deskripsi' => $deskripsi,
+            'foto' => $foto,
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_profilSekolah->update($where, $data, 'profil_sekolah');
+        redirect('TentangKamiController/dashboardProfil');
     }
 
     public function tambah($table)

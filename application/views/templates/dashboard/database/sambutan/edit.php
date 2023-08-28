@@ -1,8 +1,8 @@
  <div class="content-wrapper">
      <section class="content">
          <?php foreach ($sambutan as $data_sambutan) { ?>
-             <!-- <form action="<?php echo base_url() . 'index.php/SambutanController/update'; ?>" method="post"> -->
-             <?php echo form_open_multipart('index.php/SambutanController/update'); ?>
+             <!-- <form action="<?php echo base_url() . 'SambutanController/update'; ?>" method="post"> -->
+             <?php echo form_open_multipart('SambutanController/update'); ?>
              <div class="form-group">
                  <label>Nama Kepala Sekolah</label>
                  <input type="hidden" name="id" class="form-control" value="<?php echo $data_sambutan->id ?>">

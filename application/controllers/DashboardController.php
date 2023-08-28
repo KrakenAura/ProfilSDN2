@@ -37,7 +37,7 @@ class DashboardController extends CI_Controller
     public function profil()
     {
         $this->load->model('m_auth');
-        $data['auth'] = $this->m_auth->detail_data();
+        $data['admin'] = $this->m_auth->detail_data();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/account', $data);
@@ -99,5 +99,24 @@ class DashboardController extends CI_Controller
 
         $this->m_hero->update($where, $data, 'hero');
         redirect('index.php/DashboardController/hero');
+    }
+    public function update_login()
+    {
+        $id = $this->input->post('id');
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+
+        $data = array(
+            'id' => $id,
+            'username' => $username,
+            'password' => $password
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_login->update($where, $data, 'admin');
+        redirect('DashboardController/profil');
     }
 }

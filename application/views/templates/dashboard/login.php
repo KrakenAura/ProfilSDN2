@@ -37,19 +37,22 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="m-sm-3">
-                                    <form>
-                                        <div class="mb-3">
-                                            <label class="form-label">Username</label>
-                                            <input class="form-control form-control-lg" type="username" name="username" placeholder="Enter your email" />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
-                                        </div>
-                                        <div class="d-grid gap-2 mt-3">
-                                            <a href="<?php echo base_url('LoginController/aksi_login') ?>" class="btn btn-lg btn-primary">Sign in</a>
-                                        </div>
-                                    </form>
+                                    <!-- <form> -->
+                                    <?php echo form_open_multipart('LoginController/aksi_login'); ?>
+                                    <div class="mb-3">
+                                        <label class="form-label">Username</label>
+                                        <input class="form-control form-control-lg" type="username" name="username" placeholder="Enter your email" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Password</label>
+                                        <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
+                                    </div>
+                                    <div class="d-grid gap-2 mt-3">
+                                        <button type="submit" class="btn btn-primary">Sign In</button>
+                                        <!-- <a href="<?php echo base_url('LoginController/aksi_login') ?>" class="btn btn-lg btn-primary">Sign in</a> -->
+                                    </div>
+                                    <?php echo form_close(); ?>
+                                    <!-- </form> -->
                                 </div>
                             </div>
                         </div>

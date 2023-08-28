@@ -20,11 +20,11 @@
                                     <td><?php echo $data_visi->visi ?></td>
                                     <td>
                                         <?php echo anchor(
-                                            '/index.php/TentangKamiController/hapus/' . $data_visi->id . '/' . 'visi',
+                                            '/TentangKamiController/hapus/' . $data_visi->id . '/' . 'visi',
                                             '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                         ) ?>
                                         <?php echo anchor(
-                                            '/index.php/TentangKamiController/edit/' . $data_visi->id . '/' . 'visi',
+                                            '/TentangKamiController/edit/' . $data_visi->id . '/' . 'visi',
                                             '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
                                         ) ?>
                                     </td>

@@ -4,7 +4,7 @@ class m_auth extends CI_Model
 {
     public function tampil_data()
     {
-        return $this->db->get('auth');
+        return $this->db->get('admin');
     }
     public function register_user($username, $password)
     {
@@ -13,11 +13,11 @@ class m_auth extends CI_Model
             'username' => $username,
             'password' => $hashed_password
         );
-        $this->db->insert('auth', $data);
+        $this->db->insert('admin', $data);
     }
     public function authenticate($username, $password)
     {
-        $query = $this->db->get_where('auth', ['username' => $username]);
+        $query = $this->db->get_where('admin', ['username' => $username]);
         if ($query->num_rows() === 1) {
             $user = $query->row();
             if (password_verify($password, $user->password)) {
@@ -26,22 +26,9 @@ class m_auth extends CI_Model
         }
         return false;
     }
-    public function update_username($newUsername)
-    {
-        $data = array('username' => $newUsername);
-        $this->db->where('id', 1);
-        $this->db->update('auth', $data);
-    }
-    public function update_password($newPassword)
-    {
-        $hashed_password = password_hash($newPassword, PASSWORD_DEFAULT);
-        $data = array('password' => $hashed_password);
-        $this->db->where('id', 1);
-        $this->db->update('auth', $data);
-    }
     public function detail_data()
     {
-        $query = $this->db->get('auth')->row_array();
+        $query = $this->db->get('admin')->row_array();
         return $query;
     }
 }

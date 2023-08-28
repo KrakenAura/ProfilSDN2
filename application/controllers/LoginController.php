@@ -51,7 +51,6 @@ class LoginController extends CI_Controller
     public function index()
     {
         $data['admin'] = $this->m_login->login()->result();
-        print_r($data);
         $this->load->view('templates/dashboard/login', $data);
     }
 
@@ -78,6 +77,30 @@ class LoginController extends CI_Controller
             redirect('LoginController/index');
         }
     }
+    // public function aksi_login()
+    // {
+    //     $username = $this->input->post('username');
+    //     $password = $this->input->post('password');
+
+    //     $where = array(
+    //         'username' => $username,
+    //     );
+    //     $user = $this->m_login->cek_login('admin', $where);
+
+    //     if ($user && strcasecmp($user->username, $username) === 0 && password_verify($password, $user->password)) {
+    //         $data_session = array(
+    //             'nama' => $username,
+    //             'status' => "login"
+    //         );
+    //         $this->session->set_userdata($data_session);
+
+    //         redirect('DashboardController/index');
+    //     } else {
+    //         $this->session->set_flashdata('error', 'Username atau password salah!');
+    //         redirect('LoginController/index');
+    //     }
+    // }
+
 
     public function logout()
     {

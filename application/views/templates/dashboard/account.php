@@ -35,7 +35,7 @@
                             <tr>
                                 <th class="">Username</th>
                                 <td class=" w-5">&nbsp :</td>
-                                <td class="" style="padding-left: 25px;"><?php echo $auth['username'] ?></td>
+                                <td class="" style="padding-left: 25px;"><?php echo $admin['username'] ?></td>
 
                             </tr>
                             <tr>
@@ -43,7 +43,7 @@
                                 <td class=" w-5">&nbsp :</td>
                                 <td class="password-field" style="padding-left: 25px;">
                                     <div class="password-input-container">
-                                        <input type="password" id="password-input" value="<?php echo $auth['password'] ?>" readonly>
+                                        <input type="password" id="password-input" value="<?php echo $admin['password'] ?>" readonly>
                                         <div class="toggle-eye">
                                             <ion-icon name="eye-outline" class="toggle-password"></ion-icon>
                                         </div>
@@ -52,6 +52,9 @@
                             </tr>
                         </table>
                         <button class="btn btn-primary btn-overlay" data-bs-toggle="modal" data-bs-target="#AccountModal">Edit Akun</button>
+                        <a href="<?= base_url('/LoginController/logout') ?>" class="btn btn-danger">
+                            <i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Log Out</span>
+                        </a>
                     </div>
                 </div>
             </main>
@@ -64,14 +67,15 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <?php echo form_open_multipart('index.php/DashboardController/edit'); ?>
+                            <?php echo form_open_multipart('DashboardController/update_login'); ?>
                             <div class="form-group">
                                 <label>Username</label>
-                                <input type="text" name="username" class="form-control">
+                                <input type="hidden" name="id" class="form-control" value="<?php echo $admin['id'] ?>">
+                                <input type="text" name="username" class="form-control" value="<?php echo $admin['username'] ?>">
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="text" name="password" class="form-control">
+                                <input type="text" name="password" class="form-control" value="<?php echo $admin['password'] ?>">
                             </div>
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
                             <button type="submit" class="btn btn-primary">Simpan</button>

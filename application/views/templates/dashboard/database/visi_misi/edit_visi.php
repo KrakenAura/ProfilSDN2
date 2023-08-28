@@ -1,7 +1,7 @@
  <div class="content-wrapper">
      <section class="content">
          <?php foreach ($visi as $data_visi) { ?>
-             <?php echo form_open_multipart('index.php/TentangKamiController/update/visi'); ?>
+             <?php echo form_open_multipart('TentangKamiController/update/visi'); ?>
              <div class="form-group">
                  <label>Visi Sekolah</label>
                  <input type="hidden" name="id" class="form-control" value="<?php echo $data_visi->id ?>">

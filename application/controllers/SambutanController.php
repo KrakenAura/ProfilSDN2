@@ -51,7 +51,7 @@ class SambutanController extends CI_Controller
             if (!$this->upload->do_upload('foto')) {
                 echo "Upload Gagal";
                 die();
-            }else{
+            } else {
                 $foto = $this->upload->data('file_name');
             }
         }
@@ -67,6 +67,6 @@ class SambutanController extends CI_Controller
         );
 
         $this->m_sambutan->update($where, $data, 'sambutan');
-        redirect('index.php/SambutanController/index');
+        redirect('SambutanController/index');
     }
 }

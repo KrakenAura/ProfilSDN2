@@ -28,17 +28,17 @@
                                     <td>
                                         <div class="btn-group" role="group">
                                             <?php echo anchor(
-                                                '/index.php/PrestasiController/hapus/' . $data_prestasi->id,
+                                                '/PrestasiController/hapus/' . $data_prestasi->id,
                                                 '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                             ) ?>
 
                                             <?php echo anchor(
-                                                '/index.php/PrestasiController/edit/' . $data_prestasi->id,
+                                                '/PrestasiController/edit/' . $data_prestasi->id,
                                                 '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
                                             ) ?>
                                             <?php echo anchor(
-                                                '/index.php/PrestasiController/tambahFoto/' . $data_prestasi->id,
-                                                '<div class="btn btn-success btn-sm"><i class="align-middle me-2" data-feather="plus"></i>Tambah Foto</div>'
+                                                '/PrestasiController/tambahFoto/' . $data_prestasi->id,
+                                                '<div class="btn btn-success btn-sm"><i class="align-middle me-2" data-feather="image"></i>Galeri</div>'
                                             ) ?>
 
                                         </div>

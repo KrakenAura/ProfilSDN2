@@ -1,7 +1,7 @@
  <div class="content-wrapper">
      <section class="content">
          <?php foreach ($struktur_organisasi as $data_struktur) { ?>
-             <?php echo form_open_multipart('index.php/StrukturOrganisasiController/update'); ?>
+             <?php echo form_open_multipart('StrukturOrganisasiController/update'); ?>
              <div class="form-group">
                  <label>Nama Guru</label>
                  <input type="hidden" name="id" class="form-control" value="<?php echo $data_struktur->id ?>">
