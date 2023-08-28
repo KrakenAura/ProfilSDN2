@@ -20,7 +20,7 @@
                                     <td>
                                         <div class="btn-group" role="group">
                                             <?php echo anchor(
-                                                '/index.php/KegiatanRutinController/hapusFoto/' . $data_galeri->id,
+                                                '/KegiatanRutinController/hapusFoto/' . $data_galeri->id,
                                                 '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                             ) ?>
                                         </div>
@@ -40,7 +40,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <?php echo form_open_multipart('index.php/KegiatanRutinController/inputFoto'); ?>
+                                <?php echo form_open_multipart('/KegiatanRutinController/inputFoto'); ?>
                                 <div class="form-group">
                                     <label>Tambah Foto</label>
                                     <input type="hidden" name="id" class="form-control">
