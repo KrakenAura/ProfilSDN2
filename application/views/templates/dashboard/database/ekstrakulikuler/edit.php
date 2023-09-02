@@ -12,8 +12,8 @@
                  <input type="text" name="deskripsi" class="form-control" value="<?php echo $data_ekstrakulikuler->deskripsi ?>">
              </div>
              <div class="form-group">
-                 <label>Manfaat</label>
-                 <input type="text" name="manfaat" class="form-control" value="<?php echo $data_ekstrakulikuler->manfaat ?>">
+                 <label>Pelatih</label>
+                 <input type="text" name="pelatih" class="form-control" value="<?php echo $data_ekstrakulikuler->pelatih ?>">
              </div>
              <div class="form-group">
                  <label>Jadwal</label>

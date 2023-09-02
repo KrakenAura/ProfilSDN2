@@ -11,10 +11,6 @@
                                 <th>Nama</th>
                                 <th>NIP</th>
                                 <th>Jabatan</th>
-                                <th>Status</th>
-                                <th>Mata Pelajaran</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Email</th>
                                 <th>Foto</th>
                                 <th>Action</th>
                             </tr>
@@ -26,10 +22,6 @@
                                     <td><?php echo $data_struktur->nama ?></td>
                                     <td><?php echo $data_struktur->nip ?></td>
                                     <td><?php echo $data_struktur->jabatan ?></td>
-                                    <td><?php echo $data_struktur->status ?></td>
-                                    <td><?php echo $data_struktur->mata_pelajaran ?></td>
-                                    <td><?php echo $data_struktur->jenis_kelamin ?></td>
-                                    <td><?php echo $data_struktur->email ?></td>
 
                                     <td><img src="<?= base_url('assets/Resource/struktur_organisasi/') ?><?php echo $data_struktur->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                     <td>
@@ -74,23 +66,6 @@
                                         <label>Jabatan</label>
                                         <input type="text" name="jabatan" class="form-control">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Status</label>
-                                        <input type="text" name="status" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Mata Pelajaran</label>
-                                        <input type="text" name="mata_pelajaran" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jenis Kelamin</label>
-                                        <input type="text" name="jenis_kelamin" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="text" name="email" class="form-control">
-                                    </div>
-
                                     <div class="form-group mb-4">
                                         <label>Foto Guru</label>
                                         <input type="file" name="foto" class="form-control">

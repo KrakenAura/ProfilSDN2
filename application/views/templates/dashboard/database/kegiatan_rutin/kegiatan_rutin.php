@@ -10,10 +10,9 @@
                                     <th class="col-1 text-center" style="width: 10%;">No</th>
                                     <th class="col-2 text-center" style="width: 15%;">Foto</th>
                                     <th class="col-3 text-center" style="width: 15%;">Judul Kegiatan</th>
-                                    <th class="col-4 text-center" style="width: 15%;">Deskripsi Singkat</th>
-                                    <th class="col-5 text-center" style="width: 25%;">Deskripsi</th>
-                                    <th class="col-6 text-center" style="width: 15%;">Jadwal</th>
-                                    <th class="col-7 text-center" style="width: 15%;">Action</th>
+                                    <th class="col-4 text-center" style="width: 25%;">Deskripsi</th>
+                                    <th class="col-5 text-center" style="width: 15%;">Jadwal</th>
+                                    <th class="col-6 text-center" style="width: 15%;">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -24,8 +23,17 @@
                                         <td class="text-center"><?php echo $no++ ?></td>
                                         <td class="text-center"><img src="<?= base_url('assets/Resource/kegiatan_rutin/') ?><?php echo $data_kegiatan_rutin->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                         <td class="text-center"><?php echo $data_kegiatan_rutin->judul_kegiatan ?></td>
-                                        <td class="text-center"><?php echo $data_kegiatan_rutin->deskripsi_singkat ?></td>
-                                        <td class="text-center"><?php echo $data_kegiatan_rutin->deskripsi ?></td>
+                                        <td>
+                                            <?php
+                                            $isi = $data_kegiatan_rutin->deskripsi;
+                                            $words = explode(' ', $isi);
+                                            $trimmed_content = implode(' ', array_slice($words, 0, 50));
+                                            if (count($words) > 50) {
+                                                $trimmed_content .= ' (...)';
+                                            }
+                                            echo $trimmed_content;
+                                            ?>
+                                        </td>
                                         <td class="text-center"><?php echo $data_kegiatan_rutin->jadwal ?></td>
                                         <td>
                                             <div class="btn-group" role="group">
@@ -67,13 +75,10 @@
                                         <input type="text" name="judul_kegiatan" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label>Deskripsi Singkat</label>
-                                        <input type="text" name="deskripsi_singkat" class="form-control">
-                                    </div>
-                                    <div class="form-group">
                                         <label>Deskripsi</label>
-                                        <input type="text" name="deskripsi" class="form-control">
+                                        <textarea name="deskripsi" class="form-control" rows="5" cols="50"></textarea>
                                     </div>
+
                                     <div class="form-group">
                                         <label>Jadwal</label>
                                         <input type="text" name="jadwal" class="form-control">

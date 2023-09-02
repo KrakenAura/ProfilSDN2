@@ -11,7 +11,7 @@
                                     <th class="col-6 text-center" style="width: 9%;">Foto</th>
                                     <th class="col-2 text-center" style="width: 18%;">Nama Ekstrakulikuler</th>
                                     <th class="col-3 text-center" style="width: 18%;">Deskripsi</th>
-                                    <th class="col-4 text-center" style="width: 18%;">Manfaat</th>
+                                    <th class="col-4 text-center" style="width: 18%;">Pelatih</th>
                                     <th class="col-5 text-center" style="width: 18%;">Jadwal</th>
                                     <th class="col-7 text-center" style="width: 18%;">Action</th>
                                 </tr>
@@ -25,7 +25,7 @@
                                         <td class="text-center"><img src="<?= base_url('assets/Resource/ekstrakulikuler/') ?><?php echo $data_ekstrakulikuler->foto; ?>" class="img-fluid" style="max-width: 50%;"> </td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->nama ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->deskripsi ?></td>
-                                        <td class="text-center"><?php echo $data_ekstrakulikuler->manfaat ?></td>
+                                        <td class="text-center"><?php echo $data_ekstrakulikuler->pelatih ?></td>
                                         <td class="text-center"><?php echo $data_ekstrakulikuler->jadwal ?></td>
                                         <td>
                                             <div class="btn-group" role="group">
@@ -71,8 +71,8 @@
                                         <input type="text" name="deskripsi" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label>Manfaat</label>
-                                        <input type="text" name="manfaat" class="form-control">
+                                        <label>Pelatih</label>
+                                        <input type="text" name="pelatih" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <label>Jadwal</label>

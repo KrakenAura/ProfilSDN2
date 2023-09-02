@@ -17,7 +17,7 @@
         <?php foreach ($ekstrakulikuler as $data_ekstrakulikuler) : ?>
             <div class="row mb-3">
                 <div class="col">
-                    <div class="card border bg-light rounded">
+                    <div class="card border rounded" style="box-shadow: 5px 5px 10px #A6ACAF;">
                         <div class="card-body">
                             <div class="row">
                                 <h3 class="card-title mb-1">
@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="col-lg-9 col-md-8 col-12 position-relative">
                                     <p><?php echo $data_ekstrakulikuler->deskripsi ?></p>
-                                    <p><?php echo $data_ekstrakulikuler->jadwal ?></p>
+                                    <p><i class="align-middle me-2" data-feather="calendar"></i><?php echo $data_ekstrakulikuler->jadwal ?></p>
                                     <div class="d-flex justify-content-end">
                                         <?php echo anchor('EkstrakulikulerController/detail/' . $data_ekstrakulikuler->id, '<button class="btn btn-secondary btn-sm me-3 mb-3">Detail Ekstrakulikuler</button>') ?>
                                     </div>

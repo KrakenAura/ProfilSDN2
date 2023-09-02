@@ -36,7 +36,7 @@
     <style>
         .card {
             border-radius: 20px;
-            border: 2px solid #7D7589;
+            box-shadow: 5px 5px 10px #A6ACAF;
             overflow: hidden;
         }
 
@@ -60,10 +60,10 @@
         <div class="container">
             <div class="row g-4">
                 <?php foreach ($struktur_organisasi as $data_struktur) : ?>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 mb-4">
                         <div class="card bg-light">
                             <div class="card-body text-center">
-                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle border border-3 border-gray mb-4" style="width: 150px; height: 150px;">
+                                <img src="<?= base_url('assets/Resource/struktur_organisasi/' . $data_struktur->foto) ?>" loading="lazy" class="rounded-circle mb-4" style="width: 150px; height: 150px;">
                                 <h3 class="card-title mb-1">
                                     <?php echo $data_struktur->nama ?>
                                 </h3>
@@ -74,6 +74,7 @@
                             </div>
                         </div>
                     </div>
+                    <br>
                 <?php endforeach ?>
             </div>
         </div>

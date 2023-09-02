@@ -20,16 +20,18 @@
         </div>
         <img src="<?= base_url('assets/Resource/ekstrakulikuler/' . $detail->foto) ?>" class="img-fluid mx-auto d-block mt-4" style="width: 50% ;box-shadow: 5px 5px 20px #A6ACAF;">
         <div class="row">
-            <div class="col mb-4" style="padding-left: 4rem;">
+            <div class="col mb-4" style="padding-left: 4rem; padding-top: 2rem; padding-right: 4rem;">
                 <p><?php echo $detail->deskripsi ?></p>
                 <div class="d-flex align-items-center">
                     <div class="d-flex align-items-center">
-                        <span class="material-symbols-outlined" style="font-size: 1.25em;">
-                            calendar_month
-                        </span>
-                        <p class="mb-4">
-                            <?php echo $detail->jadwal ?>
-                        </p>
+                        <div class="d-flex align-items-center">
+                            <i class="align-middle me-2" data-feather="calendar"></i><?php echo $detail->jadwal ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-4">
+                    <div class="d-flex align-items-center">
+                        <i class="align-middle me-2" data-feather="user"></i><?php echo $detail->pelatih ?>
                     </div>
                 </div>
             </div>

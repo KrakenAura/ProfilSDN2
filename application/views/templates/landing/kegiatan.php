@@ -18,7 +18,7 @@
     <?php foreach ($kegiatan_rutin as $data_kegiatan) : ?>
         <div class="row mb-3">
             <div class="col">
-                <div class="card border bg-light rounded">
+                <div class="card border rounded" style="box-shadow: 5px 5px 10px #A6ACAF;">
                     <div class="card-body">
                         <div class="row">
                             <h3 class="card-title mb-3">
@@ -30,7 +30,16 @@
                                 <img src="<?= base_url('assets/Resource/kegiatan_rutin/' . $data_kegiatan->foto) ?>" class="border border-3 border-gray mb-4 img-fluid" style="max-width: 40%;" alt="Kegiatan Foto">
                             </div>
                             <div class="col-lg-9 col-md-8 col-12 position-relative">
-                                <p><?php echo $data_kegiatan->deskripsi_singkat ?></p>
+                                <?php
+                                $limit = 100;
+                                $description = $data_kegiatan->deskripsi;
+
+                                if (strlen($description) > $limit) {
+                                    $description = substr($description, 0, strrpos(substr($description, 0, $limit), ' ')) . '...';
+                                }
+                                ?>
+
+                                <p><?php echo $description; ?></p>
                                 <p><?php echo $data_kegiatan->jadwal ?></p>
                                 <div class="d-flex justify-content-end">
                                     <?php echo anchor('KegiatanRutinController/detail/' . $data_kegiatan->id, '<button class="btn btn-secondary btn-sm me-3 mb-3">Detail Kegiatan</button>') ?>

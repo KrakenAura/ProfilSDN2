@@ -45,28 +45,6 @@
                             <td class=" w-5">&nbsp :</td>
                             <td style="padding-left: 25px"><?php echo $detail->jabatan ?></td>
                         </tr>
-                        <tr>
-                            <th>Status</th>
-                            <td class=" w-5">&nbsp :</td>
-
-                            <td style="padding-left: 25px"><?php echo $detail->status ?></td>
-                        </tr>
-                        <tr>
-                            <th>Mata Pelajaran</th>
-                            <td class=" w-5">&nbsp :</td>
-
-                            <td style="padding-left: 25px"><?php echo $detail->mata_pelajaran ?></td>
-                        </tr>
-                        <tr>
-                            <th>Jenis Kelamin</th>
-                            <td class=" w-5">&nbsp :</td>
-                            <td style="padding-left: 25px"><?php echo $detail->jenis_kelamin ?></td>
-                        </tr>
-                        <tr>
-                            <th>Email</th>
-                            <td class=" w-5">&nbsp :</td>
-                            <td style="padding-left: 25px"><?php echo $detail->email ?></td>
-                        </tr>
                     </table>
                     <br>
                     <br>

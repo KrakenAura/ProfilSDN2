@@ -8,6 +8,8 @@
     <meta name="author" content="" />
     <title>Profil SD Negeri 2 Mulyoagung</title>
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/Home') ?>/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>

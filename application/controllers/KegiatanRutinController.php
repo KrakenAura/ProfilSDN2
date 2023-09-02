@@ -52,7 +52,6 @@ class KegiatanRutinController extends CI_Controller
     public function tambah()
     {
         $judul_kegiatan = $this->input->post('judul_kegiatan');
-        $deskripsi_singkat = $this->input->post('deskripsi_singkat');
         $deskripsi = $this->input->post('deskripsi');
         $jadwal = $this->input->post('jadwal');
         $foto = $_FILES['foto'];
@@ -71,7 +70,6 @@ class KegiatanRutinController extends CI_Controller
         }
         $data = array(
             'judul_kegiatan' => $judul_kegiatan,
-            'deskripsi_singkat' => $deskripsi_singkat,
             'deskripsi' => $deskripsi,
             'jadwal' => $jadwal,
             'foto' => $foto
@@ -98,7 +96,6 @@ class KegiatanRutinController extends CI_Controller
     {
         $id = $this->input->post('id');
         $judul_kegiatan = $this->input->post('judul_kegiatan');
-        $deskripsi_singkat = $this->input->post('deskripsi_singkat');
         $deskripsi = $this->input->post('deskripsi');
         $jadwal = $this->input->post('jadwal');
         $foto = $_FILES['foto'];
@@ -124,7 +121,6 @@ class KegiatanRutinController extends CI_Controller
 
         $data = array(
             'judul_kegiatan' => $judul_kegiatan,
-            'deskripsi_singkat' => $deskripsi_singkat,
             'deskripsi' => $deskripsi,
             'jadwal' => $jadwal,
             'foto' => $foto

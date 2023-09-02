@@ -37,7 +37,7 @@ class EkstrakulikulerController extends CI_Controller
     {
         $nama = $this->input->post('nama');
         $deskripsi = $this->input->post('deskripsi');
-        $manfaat = $this->input->post('manfaat');
+        $pelatih = $this->input->post('pelatih');
         $jadwal = $this->input->post('jadwal');
 
         $foto = $_FILES['foto'];
@@ -57,7 +57,7 @@ class EkstrakulikulerController extends CI_Controller
         $data = array(
             'nama' => $nama,
             'deskripsi' => $deskripsi,
-            'manfaat' => $manfaat,
+            'pelatih' => $pelatih,
             'jadwal' => $jadwal,
             'foto' => $foto
         );
@@ -85,7 +85,7 @@ class EkstrakulikulerController extends CI_Controller
         $id = $this->input->post('id');
         $nama = $this->input->post('nama');
         $deskripsi = $this->input->post('deskripsi');
-        $manfaat = $this->input->post('manfaat');
+        $pelatih = $this->input->post('pelatih');
         $jadwal = $this->input->post('jadwal');
         $foto = $_FILES['foto'];
 
@@ -113,7 +113,7 @@ class EkstrakulikulerController extends CI_Controller
             'nama' => $nama,
             'deskripsi' => $deskripsi,
             'jadwal' => $jadwal,
-            'manfaat' => $manfaat,
+            'pelatih' => $pelatih,
             'foto' => $foto
         );
 

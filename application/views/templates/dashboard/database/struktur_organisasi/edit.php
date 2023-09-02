@@ -15,23 +15,6 @@
                  <label>Jabatan</label>
                  <input type="text" name="jabatan" class="form-control" value="<?php echo $data_struktur->jabatan ?>">
              </div>
-             <div class="form-group">
-                 <label>Status</label>
-                 <input type="text" name="status" class="form-control" value="<?php echo $data_struktur->status ?>">
-             </div>
-             <div class="form-group">
-                 <label>Mata Pelajaran</label>
-                 <input type="text" name="mata_pelajaran" class="form-control" value="<?php echo $data_struktur->mata_pelajaran ?>">
-             </div>
-             <div class="form-group">
-                 <label>Jenis Kelamin</label>
-                 <input type="text" name="jenis_kelamin" class="form-control" value="<?php echo $data_struktur->jenis_kelamin ?>">
-             </div>
-             <div class="form-group">
-                 <label>Email</label>
-                 <input type="text" name="email" class="form-control" value="<?php echo $data_struktur->email ?>">
-             </div>
-
              <div class="form-group mb-4">
                  <label>Foto Guru</label>
                  <input type="file" name="foto" class="form-control" value="<?php echo $data_struktur->foto ?>">

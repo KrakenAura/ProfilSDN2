@@ -8,12 +8,8 @@
                  <input type="text" name="judul_kegiatan" class="form-control" value="<?php echo $data_kegiatan->judul_kegiatan ?>">
              </div>
              <div class="form-group">
-                 <label>Deskripsi Singkat</label>
-                 <input type="text" name="deskripsi_singkat" class="form-control" value="<?php echo $data_kegiatan->deskripsi_singkat ?>">
-             </div>
-             <div class="form-group">
-                 <label>Singkat</label>
-                 <input type="text" name="deskripsi" class="form-control" value="<?php echo $data_kegiatan->deskripsi ?>">
+                 <label>Deskripsi</label>
+                 <textarea name="deskripsi" class="form-control" rows="5" cols="50"><?php echo htmlspecialchars($data_kegiatan->deskripsi); ?></textarea>
              </div>
              <div class="form-group">
                  <label>Jadwal</label>

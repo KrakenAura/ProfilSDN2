@@ -53,10 +53,6 @@ class StrukturOrganisasiController extends CI_Controller
         $nama = $this->input->post('nama');
         $nip = $this->input->post('nip');
         $jabatan = $this->input->post('jabatan');
-        $status = $this->input->post('status');
-        $mata_pelajaran = $this->input->post('mata_pelajaran');
-        $jenis_kelamin = $this->input->post('jenis_kelamin');
-        $email = $this->input->post('email');
         $foto = $_FILES['foto'];
 
         // Check if a file is uploaded
@@ -82,10 +78,6 @@ class StrukturOrganisasiController extends CI_Controller
             'nama' => $nama,
             'nip' => $nip,
             'jabatan' => $jabatan,
-            'status' => $status,
-            'mata_pelajaran' => $mata_pelajaran,
-            'jenis_kelamin' => $jenis_kelamin,
-            'email' => $email,
             'foto' => $foto
         );
 
@@ -102,10 +94,6 @@ class StrukturOrganisasiController extends CI_Controller
         $nama = $this->input->post('nama');
         $nip = $this->input->post('nip');
         $jabatan = $this->input->post('jabatan');
-        $status = $this->input->post('status');
-        $mata_pelajaran = $this->input->post('mata_pelajaran');
-        $jenis_kelamin = $this->input->post('jenis_kelamin');
-        $email = $this->input->post('email');
         $foto = $_FILES['foto'];
         if ($foto = '') {
         } else {
@@ -124,10 +112,6 @@ class StrukturOrganisasiController extends CI_Controller
             'nama' => $nama,
             'nip' => $nip,
             'jabatan' => $jabatan,
-            'status' => $status,
-            'mata_pelajaran' => $mata_pelajaran,
-            'jenis_kelamin' => $jenis_kelamin,
-            'email' => $email,
             'foto' => $foto
         );
 
