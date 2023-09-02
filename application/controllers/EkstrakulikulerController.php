@@ -63,13 +63,13 @@ class EkstrakulikulerController extends CI_Controller
         );
 
         $this->m_ekstrakulikuler->input('ekstrakulikuler', $data);
-        redirect('index.php/EkstrakulikulerController/dashboard');
+        redirect('EkstrakulikulerController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
         $this->m_ekstrakulikuler->hapus('ekstrakulikuler', $where);
-        redirect('index.php/EkstrakulikulerController/dashboard');
+        redirect('EkstrakulikulerController/dashboard');
     }
     public function edit($id)
     {
@@ -122,7 +122,7 @@ class EkstrakulikulerController extends CI_Controller
         );
 
         $this->m_ekstrakulikuler->update($where, $data, 'ekstrakulikuler');
-        redirect('index.php/EkstrakulikulerController/dashboard');
+        redirect('EkstrakulikulerController/dashboard');
     }
     public function tambahFoto($id)
     {
@@ -160,12 +160,12 @@ class EkstrakulikulerController extends CI_Controller
         print_r($data);
 
         $this->m_ekstrakulikuler->input('galeri_ekstrakulikuler', $data);
-        redirect('index.php/EkstrakulikulerController/dashboard');
+        redirect('EkstrakulikulerController/dashboard');
     }
     public function hapusFoto($id)
     {
         $where = array('id' => $id);
         $this->m_ekstrakulikuler->hapus('galeri_ekstrakulikuler', $where);
-        redirect('index.php/EkstrakulikulerController/dashboard');
+        redirect('EkstrakulikulerController/dashboard');
     }
 }

@@ -57,7 +57,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <?php echo form_open_multipart('index.php/PrestasiController/tambah'); ?>
+                                    <?php echo form_open_multipart('PrestasiController/tambah'); ?>
                                     <div class="form-group">
                                         <label>Nama Prestasi</label>
                                         <input type="hidden" name="id" class="form-control">

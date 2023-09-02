@@ -1,7 +1,7 @@
  <div class="content-wrapper">
      <section class="content">
          <?php foreach ($sosial_media as $data_sosmed) { ?>
-             <?php echo form_open_multipart('index.php/ContactController/update'); ?>
+             <?php echo form_open_multipart('ContactController/update'); ?>
              <div class="form-group">
                  <label>Platform</label>
                  <input type="hidden" name="id" class="form-control" value="<?php echo $data_sosmed->id ?>">

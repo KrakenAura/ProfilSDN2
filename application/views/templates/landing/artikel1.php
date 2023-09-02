@@ -55,8 +55,8 @@
           <div class="card-body">
             <h5 class="card-title">Eksplorasi Pembelajaran SDN 2 Mulyoagung</h5>
             <ul class="list-unstyled">
-              <li><a href="<?= base_url('/index.php/ArtikelController/artikel') ?>">Berita</a></li>
-              <li><a href="<?= base_url('/index.php/ArtikelController/artikel') ?>">Informasi</a></li>
+              <li><a href="<?= base_url('/ArtikelController/artikel') ?>">Berita</a></li>
+              <li><a href="<?= base_url('/ArtikelController/artikel') ?>">Informasi</a></li>
             </ul>
           </div>
         </div>

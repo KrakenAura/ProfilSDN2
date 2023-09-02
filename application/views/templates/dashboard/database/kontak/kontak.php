@@ -29,11 +29,11 @@
                                         <td>
                                             <div class="btn-group" role="group">
                                                 <?php echo anchor(
-                                                    '/index.php/ContactController/hapus/' . $data_sosmed->id,
+                                                    '/ContactController/hapus/' . $data_sosmed->id,
                                                     '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                                 ) ?>
                                                 <?php echo anchor(
-                                                    '/index.php/ContactController/edit/' . $data_sosmed->id,
+                                                    '/ContactController/edit/' . $data_sosmed->id,
                                                     '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
                                                 ) ?>
                                             </div>
@@ -56,7 +56,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <?php echo form_open_multipart('index.php/ContactController/tambah'); ?>
+                                    <?php echo form_open_multipart('ContactController/tambah'); ?>
                                     <div class="form-group">
                                         <label>Platform</label>
                                         <input type="hidden" name="id" class="form-control">

@@ -8,15 +8,15 @@ class TentangKamiController extends CI_Controller
      * Index Page for this controller.
      *
      * Maps to the following URL
-     * 		http://example.com/index.php/welcome
+     * 		http://example.com/welcome
      *	- or -
-     * 		http://example.com/index.php/welcome/index
+     * 		http://example.com/welcome/index
      *	- or -
      * Since this controller is set as the default controller in
      * config/routes.php, it's displayed at http://example.com/
      *
      * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
+     * map to /welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
     public function index()
@@ -54,7 +54,7 @@ class TentangKamiController extends CI_Controller
         $where = array('id' => $id);
         $table = array($table);
         $this->m_visimisi->hapus($where, $table);
-        redirect('index.php/TentangKamiController/dashboardVisiMisi');
+        redirect('TentangKamiController/dashboardVisiMisi');
     }
     public function update($table)
     {
@@ -70,7 +70,7 @@ class TentangKamiController extends CI_Controller
 
         $where = array('id' => $id);
         $this->m_visimisi->update($where, $data, $table);
-        redirect('index.php/TentangKamiController/dashboardVisiMisi');
+        redirect('TentangKamiController/dashboardVisiMisi');
     }
     public function edit($id, $table)
     {
@@ -141,6 +141,6 @@ class TentangKamiController extends CI_Controller
         }
 
         $this->m_visimisi->input($data, $table);
-        redirect('index.php/TentangKamiController/dashboardVisiMisi');
+        redirect('TentangKamiController/dashboardVisiMisi');
     }
 }

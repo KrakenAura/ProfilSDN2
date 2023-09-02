@@ -59,4 +59,70 @@ class ArtikelController extends CI_Controller
         $this->load->view('/templates/landing/artikel/informasi', $data);
         $this->load->view('/templates/landing/footer');
     }
+    public function dashboard()
+    {
+        $data['artikel'] = $this->m_artikel->tampil_data()->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/artikel/artikel', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function edit($id)
+    {
+        $where = array('id' => $id);
+        $data['artikel'] = $this->m_artikel->edit($where, 'artikel')->result();
+        $this->load->view('/templates/dashboard/header');
+        $this->load->view('/templates/dashboard/sidebar');
+        $this->load->view('/templates/dashboard/database/artikel/edit', $data);
+        $this->load->view('/templates/dashboard/footer');
+    }
+    public function hapus($id)
+    {
+        $where = array('id' => $id);
+        $this->m_artikel->hapus('artikel', $where);
+        redirect('ArtikelController/dashboard');
+    }
+    public function update()
+    {
+        $id = $this->input->post('id');
+        $judul = $this->input->post('judul');
+        $penulis = $this->input->post('penulis');
+        $tanggal = $this->input->post('tanggal');
+        $isi = $this->input->post('isi');
+        $jenis = $this->input->post('jenis');
+        $foto = $_FILES['foto'];
+
+        if (!empty($_FILES['foto']['name'])) {
+            $config['upload_path'] = './assets/Resource/artikel';
+            $config['allowed_types'] = 'jpg|png|jpeg';
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('foto')) {
+                echo "Upload Gagal";
+                die();
+            } else {
+                $foto = $this->upload->data('file_name');
+            }
+        } else {
+            $existingData = $this->m_artikel->getById($id); // Assuming this method fetches existing data
+            $foto = $existingData->foto;
+        }
+
+        $data = array(
+            'judul' => $judul,
+            'penulis' => $penulis,
+            'tanggal' => $tanggal,
+            'isi' => $isi,
+            'jenis' => $jenis,
+            'foto' => $foto
+        );
+
+        $where = array(
+            'id' => $id
+        );
+
+        $this->m_strukturOrganisasi->update($where, $data, 'artikel');
+        redirect('ArtikelController/dashboard');
+    }
 }

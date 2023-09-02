@@ -70,7 +70,7 @@
                                 <p class="card-text text-muted mt-1 mb-4" style="font-size: 1em;">NIP : <?php echo $data_struktur->nip ?></p>
                                 <br>
                                 <br>
-                                <?php echo anchor('index.php/StrukturOrganisasiController/detail/' . $data_struktur->id, '<button class="btn btn-secondary btn-overlay">Detail Guru</button>') ?>
+                                <?php echo anchor('StrukturOrganisasiController/detail/' . $data_struktur->id, '<button class="btn btn-secondary btn-overlay">Detail Guru</button>') ?>
                             </div>
                         </div>
                     </div>

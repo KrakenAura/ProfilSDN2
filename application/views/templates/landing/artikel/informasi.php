@@ -43,7 +43,7 @@
                                     <p> <span class="material-symbols-outlined" style="font-size: 1.25em;">person</span><?php echo $data_artikel->penulis ?></p>
                                     <p><span class="material-symbols-outlined" style="font-size: 1.25em;">calendar_month</span><?php echo $data_artikel->tanggal ?></p>
                                     <div class="d-flex justify-content-end">
-                                        <?php echo anchor('index.php/ArtikelController/artikel/' . $data_artikel->id, '<button class="btn btn-secondary btn-overlay">Detail</button>') ?>
+                                        <?php echo anchor('ArtikelController/artikel/' . $data_artikel->id, '<button class="btn btn-secondary btn-overlay">Detail</button>') ?>
                                     </div>
                                 </div>
                             </div>

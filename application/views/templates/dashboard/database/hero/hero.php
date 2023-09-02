@@ -25,7 +25,7 @@
                                     <td><?php echo $data_hero->sub_judul ?></td>
                                     <td>
                                         <?php echo anchor(
-                                            '/index.php/DashboardController/edit_hero/' . $data_hero->id,
+                                            '/DashboardController/edit_hero/' . $data_hero->id,
                                             '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
                                         ) ?>
                                     </td>

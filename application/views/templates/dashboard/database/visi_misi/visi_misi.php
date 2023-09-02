@@ -47,11 +47,11 @@
                                     <td><?php echo $data_misi->misi ?></td>
                                     <td>
                                         <?php echo anchor(
-                                            '/index.php/TentangKamiController/hapus/' . $data_misi->id . '/' . 'misi',
+                                            '/TentangKamiController/hapus/' . $data_misi->id . '/' . 'misi',
                                             '<div class="btn btn-danger btn-sm"><i class="align-middle me-2" data-feather="delete"></i>Hapus</div>'
                                         ) ?>
                                         <?php echo anchor(
-                                            '/index.php/TentangKamiController/edit/' . $data_misi->id . '/' . 'misi',
+                                            '/TentangKamiController/edit/' . $data_misi->id . '/' . 'misi',
                                             '<div class="btn btn-primary btn-sm"><i class="align-middle me-2" data-feather="edit"></i>Edit</div>'
                                         ) ?>
                                     </td>
@@ -72,7 +72,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <?php echo form_open_multipart('index.php/TentangKamiController/tambah/visi'); ?>
+                                    <?php echo form_open_multipart('TentangKamiController/tambah/visi'); ?>
                                     <div class="form-group">
                                         <label>Visi</label>
                                         <input type="hidden" name="id" class="form-control">
@@ -95,7 +95,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <?php echo form_open_multipart('index.php/TentangKamiController/tambah/misi'); ?>
+                                    <?php echo form_open_multipart('TentangKamiController/tambah/misi'); ?>
                                     <div class="form-group">
                                         <label>Misi Baru</label>
                                         <input type="hidden" name="id" class="form-control">

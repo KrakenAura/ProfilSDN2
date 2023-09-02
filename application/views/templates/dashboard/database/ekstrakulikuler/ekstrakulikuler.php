@@ -60,7 +60,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <?php echo form_open_multipart('index.php/EkstrakulikulerController/tambah'); ?>
+                                    <?php echo form_open_multipart('EkstrakulikulerController/tambah'); ?>
                                     <div class="form-group">
                                         <label>Nama Ekstrakulikuler</label>
                                         <input type="hidden" name="id" class="form-control">

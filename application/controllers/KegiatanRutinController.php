@@ -8,15 +8,15 @@ class KegiatanRutinController extends CI_Controller
      * Index Page for this controller.
      *
      * Maps to the following URL
-     * 		http://example.com/index.php/welcome
+     * 		http://example.com/welcome
      *	- or -
-     * 		http://example.com/index.php/welcome/index
+     * 		http://example.com/welcome/index
      *	- or -
      * Since this controller is set as the default controller in
      * config/routes.php, it's displayed at http://example.com/
      *
      * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
+     * map to /welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
     public function index()
@@ -77,13 +77,13 @@ class KegiatanRutinController extends CI_Controller
             'foto' => $foto
         );
         $this->m_kegiatanRutin->input('kegiatan_rutin', $data);
-        redirect('index.php/KegiatanRutinController/dashboard');
+        redirect('KegiatanRutinController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
         $this->m_kegiatanRutin->hapus('kegiatan_rutin', $where);
-        redirect('index.php/KegiatanRutinController/dashboard');
+        redirect('KegiatanRutinController/dashboard');
     }
     public function edit($id)
     {
@@ -135,7 +135,7 @@ class KegiatanRutinController extends CI_Controller
         );
 
         $this->m_kegiatanRutin->update($where, $data, 'kegiatan_rutin');
-        redirect('index.php/KegiatanRutinController/dashboard');
+        redirect('KegiatanRutinController/dashboard');
     }
     public function tambahFoto($id)
     {
@@ -173,12 +173,12 @@ class KegiatanRutinController extends CI_Controller
         print_r($data);
 
         $this->m_kegiatanRutin->input('galeri_kegiatan', $data);
-        redirect('index.php/KegiatanRutinController/dashboard');
+        redirect('KegiatanRutinController/dashboard');
     }
     public function hapusFoto($id)
     {
         $where = array('id' => $id);
         $this->m_kegiatanRutin->hapus('galeri_kegiatan', $where);
-        redirect('index.php/KegiatanRutinController/dashboard');
+        redirect('KegiatanRutinController/dashboard');
     }
 }

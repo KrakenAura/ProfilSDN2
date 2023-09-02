@@ -1,7 +1,7 @@
  <div class="content-wrapper">
      <section class="content">
          <?php foreach ($prestasi as $data_prestasi) { ?>
-             <?php echo form_open_multipart('index.php/PrestasiController/update'); ?>
+             <?php echo form_open_multipart('PrestasiController/update'); ?>
              <div class="form-group">
                  <label>Nama Prestasi</label>
                  <input type="hidden" name="id" class="form-control" value="<?php echo $data_prestasi->id ?>">

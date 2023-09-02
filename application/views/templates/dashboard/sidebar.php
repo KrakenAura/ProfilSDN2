@@ -67,6 +67,11 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
+                        <a class="sidebar-link" href="<?= base_url('/ArtikelController/dashboard') ?>">
+                            <i class="align-middle" data-feather="book"></i> <span class="align-middle">Artikel</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="<?= base_url('/ContactController/dashboard') ?>">
                             <i class="align-middle" data-feather="phone"></i> <span class="align-middle">Kontak</span>
                         </a>

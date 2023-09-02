@@ -26,7 +26,15 @@
                     <?php echo $artikel->tanggal ?>
                 </h6>
                 <img src="<?= base_url('assets/Resource/artikel/' . $artikel->foto) ?>" class="mb-4" style="width: 50%;">
-                <p><?php echo $artikel->isi ?></p>
+                <!-- <?php echo $artikel->isi ?> -->
+                <?php
+                $isi_artikel = $artikel->isi;
+                $paragraphs = explode("\n", $isi_artikel);
+
+                foreach ($paragraphs as $paragraph) {
+                    echo '<p>' . $paragraph . '</p>';
+                }
+                ?>
             </article>
         </div>
         <div class="col-md-4">
@@ -34,8 +42,8 @@
                 <div class="card-body">
                     <h5 class="card-title">Eksplorasi Berita dan Informasi SDN 2 Mulyoagung</h5>
                     <ul class="list-unstyled">
-                        <li><a href="<?= base_url('/index.php/ArtikelController/artikel') ?>">Berita</a></li>
-                        <li><a href="<?= base_url('/index.php/ArtikelController/artikel') ?>">Informasi</a></li>
+                        <li><a href="<?= base_url('/ArtikelController/artikel') ?>">Berita</a></li>
+                        <li><a href="<?= base_url('/ArtikelController/artikel') ?>">Informasi</a></li>
                     </ul>
                 </div>
             </div>

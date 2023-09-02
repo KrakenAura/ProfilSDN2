@@ -8,15 +8,15 @@ class PrestasiController extends CI_Controller
      * Index Page for this controller.
      *
      * Maps to the following URL
-     * 		http://example.com/index.php/welcome
+     * 		http://example.com/welcome
      *	- or -
-     * 		http://example.com/index.php/welcome/index
+     * 		http://example.com/welcome/index
      *	- or -
      * Since this controller is set as the default controller in
      * config/routes.php, it's displayed at http://example.com/
      *
      * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
+     * map to /welcome/<method_name>
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
     public function index()
@@ -82,7 +82,7 @@ class PrestasiController extends CI_Controller
         );
 
         $this->m_prestasi->update($where, $data, 'prestasi');
-        redirect('index.php/PrestasiController/dashboard');
+        redirect('PrestasiController/dashboard');
     }
     public function tambah()
     {
@@ -100,13 +100,13 @@ class PrestasiController extends CI_Controller
         );
 
         $this->m_prestasi->input('prestasi', $data);
-        redirect('index.php/PrestasiController/dashboard');
+        redirect('PrestasiController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
         $this->m_prestasi->hapus('prestasi', $where);
-        redirect('index.php/PrestasiController/dashboard');
+        redirect('PrestasiController/dashboard');
     }
     public function tambahFoto($id)
     {
@@ -143,12 +143,12 @@ class PrestasiController extends CI_Controller
         );
 
         $this->m_prestasi->input('galeri_prestasi', $data);
-        redirect('index.php/PrestasiController/dashboard');
+        redirect('PrestasiController/dashboard');
     }
     public function hapusFoto($id)
     {
         $where = array('id' => $id);
         $this->m_prestasi->hapus('galeri_prestasi', $where);
-        redirect('index.php/PrestasiController/dashboard');
+        redirect('PrestasiController/dashboard');
     }
 }

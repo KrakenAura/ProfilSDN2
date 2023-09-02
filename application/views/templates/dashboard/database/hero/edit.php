@@ -1,7 +1,7 @@
  <div class="content-wrapper">
      <section class="content">
          <?php foreach ($hero as $data_hero) { ?>
-             <?php echo form_open_multipart('index.php/DashboardController/update_hero'); ?>
+             <?php echo form_open_multipart('DashboardController/update_hero'); ?>
              <h5><strong>Data</strong>Wallpaper <?php echo $data_hero->halaman ?></h5>
              <input type="hidden" name="id" class="form-control" value="<?php echo $data_hero->id ?>">
              <input type="hidden" name="halaman" class="form-control" value="<?php echo $data_hero->halaman ?>">

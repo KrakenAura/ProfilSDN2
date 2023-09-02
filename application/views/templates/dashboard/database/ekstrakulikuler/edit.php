@@ -1,7 +1,7 @@
  <div class="content-wrapper">
      <section class="content">
          <?php foreach ($ekstrakulikuler as $data_ekstrakulikuler) { ?>
-             <?php echo form_open_multipart('index.php/EkstrakulikulerController/update'); ?>
+             <?php echo form_open_multipart('EkstrakulikulerController/update'); ?>
              <div class="form-group">
                  <label>Nama Ekstrakulikuler</label>
                  <input type="hidden" name="id" class="form-control" value="<?php echo $data_ekstrakulikuler->id ?>">
@@ -27,8 +27,6 @@
              <button type="submit" class="btn btn-primary">Simpan</button>
              <!-- </form> -->
              <?php echo form_close(); ?>
-
-
          <?php  } ?>
 
      </section>

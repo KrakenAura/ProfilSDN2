@@ -59,8 +59,8 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <!-- <form method="post" action="<?php echo base_url() . 'index.php/StrukturOrganisasiController/tambah' ?>"> -->
-                                    <?php echo form_open_multipart('index.php/StrukturOrganisasiController/tambah'); ?>
+                                    <!-- <form method="post" action="<?php echo base_url() . 'StrukturOrganisasiController/tambah' ?>"> -->
+                                    <?php echo form_open_multipart('StrukturOrganisasiController/tambah'); ?>
                                     <div class="form-group">
                                         <label>Nama Guru</label>
                                         <input type="hidden" name="id" class="form-control">
