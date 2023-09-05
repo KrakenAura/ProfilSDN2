@@ -21,8 +21,8 @@ class StrukturOrganisasiController extends CI_Controller
      */
     public function index()
     {
-        $data['struktur_organisasi'] = $this->m_strukturOrganisasi->tampil_data()->result();
-        $data['hero'] = $this->m_hero->tampil_data('Struktur Organisasi');
+        $data['struktur_organisasi'] = $this->M_strukturOrganisasi->tampil_data()->result();
+        $data['hero'] = $this->M_hero->tampil_data('Struktur Organisasi');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/struktur_organisasi', $data);
@@ -30,7 +30,7 @@ class StrukturOrganisasiController extends CI_Controller
     }
     public function dashboard()
     {
-        $data['struktur_organisasi'] = $this->m_strukturOrganisasi->tampil_data()->result();
+        $data['struktur_organisasi'] = $this->M_strukturOrganisasi->tampil_data()->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         //$this->load->view('/templates/dashboard/struktur_organisasi/struktur_organisasi', $data);
@@ -41,7 +41,7 @@ class StrukturOrganisasiController extends CI_Controller
     public function edit($id)
     {
         $where = array('id' => $id);
-        $data['struktur_organisasi'] = $this->m_strukturOrganisasi->edit($where, 'struktur_organisasi')->result();
+        $data['struktur_organisasi'] = $this->M_strukturOrganisasi->edit($where, 'struktur_organisasi')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/struktur_organisasi/edit', $data);
@@ -70,7 +70,7 @@ class StrukturOrganisasiController extends CI_Controller
             }
         } else {
             // No file uploaded, keep the existing value
-            $existingData = $this->m_strukturOrganisasi->getById($id); // Assuming this method fetches existing data
+            $existingData = $this->M_strukturOrganisasi->getById($id); // Assuming this method fetches existing data
             $foto = $existingData->foto;
         }
 
@@ -85,7 +85,7 @@ class StrukturOrganisasiController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_strukturOrganisasi->update($where, $data, 'struktur_organisasi');
+        $this->M_strukturOrganisasi->update($where, $data, 'struktur_organisasi');
         redirect('StrukturOrganisasiController/dashboard');
     }
 
@@ -115,16 +115,16 @@ class StrukturOrganisasiController extends CI_Controller
             'foto' => $foto
         );
 
-        $this->m_strukturOrganisasi->input($data);
+        $this->M_strukturOrganisasi->input($data);
         redirect('StrukturOrganisasiController/dashboard');
     }
 
     public function detail($id)
     {
-        $this->load->model('m_strukturOrganisasi');
-        $detail = $this->m_strukturOrganisasi->detail_data($id);
+        $this->load->model('M_strukturOrganisasi');
+        $detail = $this->M_strukturOrganisasi->detail_data($id);
         $data['detail'] = $detail;
-        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
+        $data['hero'] = $this->M_hero->tampil_data('Kegiatan Rutin');
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
@@ -134,7 +134,7 @@ class StrukturOrganisasiController extends CI_Controller
     public function hapus($id)
     {
         $where = array('id' => $id);
-        $this->m_strukturOrganisasi->hapus($where);
+        $this->M_strukturOrganisasi->hapus($where);
         redirect('StrukturOrganisasiController/dashboard');
     }
 }

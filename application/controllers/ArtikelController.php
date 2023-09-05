@@ -21,8 +21,8 @@ class ArtikelController extends CI_Controller
      */
     public function index()
     {
-        $data['artikel'] = $this->m_artikel->tampil_data()->result();
-        $data['hero'] = $this->m_hero->tampil_data('Artikel');
+        $data['artikel'] = $this->M_artikel->tampil_data()->result();
+        $data['hero'] = $this->M_hero->tampil_data('Artikel');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/artikel/artikel', $data);
@@ -31,11 +31,11 @@ class ArtikelController extends CI_Controller
     public function artikel($id)
     {
 
-        //$data['artikel'] = $this->m_artikel->tampil_data()->result();
-        $this->load->model('m_artikel');
-        $artikel = $this->m_artikel->detail_data($id);
+        //$data['artikel'] = $this->M_artikel->tampil_data()->result();
+        $this->load->model('M_artikel');
+        $artikel = $this->M_artikel->detail_data($id);
         $data['artikel'] = $artikel;
-        $data['hero'] = $this->m_hero->tampil_data('Artikel');
+        $data['hero'] = $this->M_hero->tampil_data('Artikel');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/artikel/isiArtikel', $data);
@@ -43,8 +43,8 @@ class ArtikelController extends CI_Controller
     }
     public function berita()
     {
-        $data['artikel'] = $this->m_artikel->tampil_data()->result();
-        $data['hero'] = $this->m_hero->tampil_data('Artikel');
+        $data['artikel'] = $this->M_artikel->tampil_data()->result();
+        $data['hero'] = $this->M_hero->tampil_data('Artikel');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/artikel/berita', $data);
@@ -52,8 +52,8 @@ class ArtikelController extends CI_Controller
     }
     public function informasi()
     {
-        $data['artikel'] = $this->m_artikel->tampil_data()->result();
-        $data['hero'] = $this->m_hero->tampil_data('Artikel');
+        $data['artikel'] = $this->M_artikel->tampil_data()->result();
+        $data['hero'] = $this->M_hero->tampil_data('Artikel');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/artikel/informasi', $data);
@@ -61,7 +61,7 @@ class ArtikelController extends CI_Controller
     }
     public function dashboard()
     {
-        $data['artikel'] = $this->m_artikel->tampil_data()->result();
+        $data['artikel'] = $this->M_artikel->tampil_data()->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/artikel/artikel', $data);
@@ -70,7 +70,7 @@ class ArtikelController extends CI_Controller
     public function edit($id)
     {
         $where = array('id' => $id);
-        $data['artikel'] = $this->m_artikel->edit($where, 'artikel')->result();
+        $data['artikel'] = $this->M_artikel->edit($where, 'artikel')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/artikel/edit', $data);
@@ -79,7 +79,7 @@ class ArtikelController extends CI_Controller
     public function hapus($id)
     {
         $where = array('id' => $id);
-        $this->m_artikel->hapus('artikel', $where);
+        $this->M_artikel->hapus('artikel', $where);
         redirect('ArtikelController/dashboard');
     }
     public function update()
@@ -105,7 +105,7 @@ class ArtikelController extends CI_Controller
                 $foto = $this->upload->data('file_name');
             }
         } else {
-            $existingData = $this->m_artikel->getById($id); // Assuming this method fetches existing data
+            $existingData = $this->M_artikel->getById($id); // Assuming this method fetches existing data
             $foto = $existingData->foto;
         }
 
@@ -122,7 +122,7 @@ class ArtikelController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_strukturOrganisasi->update($where, $data, 'artikel');
+        $this->M_artikel->update($where, $data, 'artikel');
         redirect('ArtikelController/dashboard');
     }
 }

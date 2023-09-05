@@ -1,6 +1,6 @@
 <?php
 
-class m_sambutan extends CI_Model
+class M_sambutan extends CI_Model
 {
     public function tampil_data()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class m_prestasi extends CI_Model
+class M_prestasi extends CI_Model
 {
     public function tampil_data($table)
     {

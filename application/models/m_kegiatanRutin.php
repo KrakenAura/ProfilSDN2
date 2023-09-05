@@ -1,6 +1,6 @@
 <?php
 
-class m_kegiatanRutin extends CI_Model
+class M_kegiatanRutin extends CI_Model
 {
     public function tampil_data()
     {

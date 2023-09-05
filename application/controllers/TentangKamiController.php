@@ -21,11 +21,11 @@ class TentangKamiController extends CI_Controller
      */
     public function index()
     {
-        $data['visi'] = $this->m_visimisi->tampil_data('visi')->result();
-        $data['misi'] = $this->m_visimisi->tampil_data('misi')->result();
-        $data['profil_sekolah'] = $this->m_profilSekolah->tampil_data()->result();
-        $data['struktur_organisasi'] = $this->m_strukturOrganisasi->tampil_data()->result();
-        $data['hero'] = $this->m_hero->tampil_data('Tentang Kami');
+        $data['visi'] = $this->M_visimisi->tampil_data('visi')->result();
+        $data['misi'] = $this->M_visimisi->tampil_data('misi')->result();
+        $data['profil_sekolah'] = $this->M_profilSekolah->tampil_data()->result();
+        $data['struktur_organisasi'] = $this->M_strukturOrganisasi->tampil_data()->result();
+        $data['hero'] = $this->M_hero->tampil_data('Tentang Kami');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/about', $data);
@@ -34,8 +34,8 @@ class TentangKamiController extends CI_Controller
     }
     public function dashboardVisiMisi()
     {
-        $data['visi'] = $this->m_visimisi->tampil_data('visi')->result();
-        $data['misi'] = $this->m_visimisi->tampil_data('misi')->result();
+        $data['visi'] = $this->M_visimisi->tampil_data('visi')->result();
+        $data['misi'] = $this->M_visimisi->tampil_data('misi')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/visi_misi/visi_misi', $data);
@@ -43,7 +43,7 @@ class TentangKamiController extends CI_Controller
     }
     public function dashboardProfil()
     {
-        $data['profil_sekolah'] = $this->m_profilSekolah->tampil_data('profil_sekolah')->result();
+        $data['profil_sekolah'] = $this->M_profilSekolah->tampil_data('profil_sekolah')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/profil_sekolah/profil_sekolah', $data);
@@ -53,7 +53,7 @@ class TentangKamiController extends CI_Controller
     {
         $where = array('id' => $id);
         $table = array($table);
-        $this->m_visimisi->hapus($where, $table);
+        $this->M_visimisi->hapus($where, $table);
         redirect('TentangKamiController/dashboardVisiMisi');
     }
     public function update($table)
@@ -69,14 +69,14 @@ class TentangKamiController extends CI_Controller
         }
 
         $where = array('id' => $id);
-        $this->m_visimisi->update($where, $data, $table);
+        $this->M_visimisi->update($where, $data, $table);
         redirect('TentangKamiController/dashboardVisiMisi');
     }
     public function edit($id, $table)
     {
         $where = array('id' => $id);
-        $data['visi'] = $this->m_visimisi->edit($where, $table)->result();
-        $data['misi'] = $this->m_visimisi->edit($where, $table)->result();
+        $data['visi'] = $this->M_visimisi->edit($where, $table)->result();
+        $data['misi'] = $this->M_visimisi->edit($where, $table)->result();
 
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
@@ -90,7 +90,7 @@ class TentangKamiController extends CI_Controller
     public function editProfil($id)
     {
         $where = array('id' => $id);
-        $data['profil_sekolah'] = $this->m_profilSekolah->edit($where, 'profil_sekolah')->result();
+        $data['profil_sekolah'] = $this->M_profilSekolah->edit($where, 'profil_sekolah')->result();
 
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
@@ -125,7 +125,7 @@ class TentangKamiController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_profilSekolah->update($where, $data, 'profil_sekolah');
+        $this->M_profilSekolah->update($where, $data, 'profil_sekolah');
         redirect('TentangKamiController/dashboardProfil');
     }
 
@@ -140,7 +140,7 @@ class TentangKamiController extends CI_Controller
             $data['misi'] = $this->input->post('misi');
         }
 
-        $this->m_visimisi->input($data, $table);
+        $this->M_visimisi->input($data, $table);
         redirect('TentangKamiController/dashboardVisiMisi');
     }
 }

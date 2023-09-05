@@ -1,6 +1,6 @@
 <?php
 
-class m_contact extends CI_Model
+class M_contact extends CI_Model
 {
     public function tampil_data()
     {

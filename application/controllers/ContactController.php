@@ -21,8 +21,8 @@ class ContactController extends CI_Controller
      */
     public function index()
     {
-        $data['sosial_media'] = $this->m_contact->tampil_data()->result();
-        $data['hero'] = $this->m_hero->tampil_data('Kontak');
+        $data['sosial_media'] = $this->M_contact->tampil_data()->result();
+        $data['hero'] = $this->M_hero->tampil_data('Kontak');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/contact', $data);
@@ -30,7 +30,7 @@ class ContactController extends CI_Controller
     }
     public function dashboard()
     {
-        $data['sosial_media'] = $this->m_contact->tampil_data()->result();
+        $data['sosial_media'] = $this->M_contact->tampil_data()->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/kontak/kontak', $data);
@@ -61,13 +61,13 @@ class ContactController extends CI_Controller
             'link' => $link,
             'icon' => $icon
         );
-        $this->m_contact->input($data);
+        $this->M_contact->input($data);
         redirect('index.php/ContactController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
-        $this->m_contact->hapus($where);
+        $this->M_contact->hapus($where);
         redirect('index.php/ContactController/dashboard');
     }
     public function update()
@@ -92,7 +92,7 @@ class ContactController extends CI_Controller
             }
         } else {
             // No file uploaded, keep the existing value
-            $existingData = $this->m_contact->getById($id); // Assuming this method fetches existing data
+            $existingData = $this->M_contact->getById($id); // Assuming this method fetches existing data
             $icon = $existingData->icon;
         }
 
@@ -107,13 +107,13 @@ class ContactController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_contact->update($where, $data, 'sosial_media');
+        $this->M_contact->update($where, $data, 'sosial_media');
         redirect('index.php/ContactController/dashboard');
     }
     public function edit($id)
     {
         $where = array('id' => $id);
-        $data['sosial_media'] = $this->m_contact->edit($where, 'sosial_media')->result();
+        $data['sosial_media'] = $this->M_contact->edit($where, 'sosial_media')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/kontak/edit', $data);

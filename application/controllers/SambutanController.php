@@ -21,7 +21,7 @@ class SambutanController extends CI_Controller
      */
     public function index()
     {
-        $data['sambutan'] = $this->m_sambutan->tampil_data()->result();
+        $data['sambutan'] = $this->M_sambutan->tampil_data()->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/sambutan/sambutan', $data);
@@ -30,7 +30,7 @@ class SambutanController extends CI_Controller
     public function edit($id)
     {
         $where = array('id' => $id);
-        $data['sambutan'] = $this->m_sambutan->edit($where, 'sambutan')->result();
+        $data['sambutan'] = $this->M_sambutan->edit($where, 'sambutan')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/sambutan/edit', $data);
@@ -66,7 +66,7 @@ class SambutanController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_sambutan->update($where, $data, 'sambutan');
+        $this->M_sambutan->update($where, $data, 'sambutan');
         redirect('SambutanController/index');
     }
 }

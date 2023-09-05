@@ -1,6 +1,6 @@
 <?php
 
-class m_hero extends CI_Model
+class M_hero extends CI_Model
 {
     public function tampil_data($halaman)
     {

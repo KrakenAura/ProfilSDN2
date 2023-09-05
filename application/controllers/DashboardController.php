@@ -28,7 +28,7 @@ class DashboardController extends CI_Controller
     }
     public function sambutan()
     {
-        $data['sambutan'] = $this->m_sambutan->tampil_data()->result();
+        $data['sambutan'] = $this->M_sambutan->tampil_data()->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/sambutan', $data);
@@ -36,8 +36,8 @@ class DashboardController extends CI_Controller
     }
     public function profil()
     {
-        $this->load->model('m_auth');
-        $data['admin'] = $this->m_auth->detail_data();
+        $this->load->model('M_auth');
+        $data['admin'] = $this->M_auth->detail_data();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/account', $data);
@@ -45,7 +45,7 @@ class DashboardController extends CI_Controller
     }
     public function hero()
     {
-        $data['hero'] = $this->m_hero->tampil_data_dashboard()->result();
+        $data['hero'] = $this->M_hero->tampil_data_dashboard()->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/hero/hero', $data);
@@ -54,7 +54,7 @@ class DashboardController extends CI_Controller
     public function edit_hero($id)
     {
         $where = array('id' => $id);
-        $data['hero'] = $this->m_hero->edit($where, 'hero')->result();
+        $data['hero'] = $this->M_hero->edit($where, 'hero')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/hero/edit', $data);
@@ -68,7 +68,7 @@ class DashboardController extends CI_Controller
         $sub_judul = $this->input->post('sub_judul');
         $foto = $_FILES['foto'];
 
-        $existingData = $this->m_hero->getByID($id);
+        $existingData = $this->M_hero->getByID($id);
 
         if (!empty($_FILES['foto']['name'])) {
             $config['upload_path'] = './assets/Resource/hero';
@@ -97,7 +97,7 @@ class DashboardController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_hero->update($where, $data, 'hero');
+        $this->M_hero->update($where, $data, 'hero');
         redirect('index.php/DashboardController/hero');
     }
     public function update_login()
@@ -116,7 +116,7 @@ class DashboardController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_login->update($where, $data, 'admin');
+        $this->M_login->update($where, $data, 'admin');
         redirect('DashboardController/profil');
     }
 }

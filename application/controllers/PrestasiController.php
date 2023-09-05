@@ -21,9 +21,9 @@ class PrestasiController extends CI_Controller
      */
     public function index()
     {
-        $data['prestasi'] = $this->m_prestasi->tampil_data('prestasi')->result();
-        $data['hero'] = $this->m_hero->tampil_data('Prestasi');
-        //$data['galeri_prestasi'] = $this->m_prestasi->tampil_data('galeri_prestasi')->result();
+        $data['prestasi'] = $this->M_prestasi->tampil_data('prestasi')->result();
+        $data['hero'] = $this->M_hero->tampil_data('Prestasi');
+        //$data['galeri_prestasi'] = $this->M_prestasi->tampil_data('galeri_prestasi')->result();
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
@@ -32,11 +32,11 @@ class PrestasiController extends CI_Controller
     }
     public function detail($id)
     {
-        $this->load->model('m_prestasi');
-        $detail = $this->m_prestasi->detail_data($id);
+        $this->load->model('M_prestasi');
+        $detail = $this->M_prestasi->detail_data($id);
         $data['detail'] = $detail;
-        $data['hero'] = $this->m_hero->tampil_data('Prestasi');
-        $data['galeri_prestasi'] = $this->m_prestasi->tampil_galeri($id);
+        $data['hero'] = $this->M_hero->tampil_data('Prestasi');
+        $data['galeri_prestasi'] = $this->M_prestasi->tampil_galeri($id);
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
@@ -45,7 +45,7 @@ class PrestasiController extends CI_Controller
     }
     public function dashboard()
     {
-        $data['prestasi'] = $this->m_prestasi->tampil_data('prestasi')->result();
+        $data['prestasi'] = $this->M_prestasi->tampil_data('prestasi')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/prestasi/prestasi', $data);
@@ -54,7 +54,7 @@ class PrestasiController extends CI_Controller
     public function edit($id)
     {
         $where = array('id' => $id);
-        $data['prestasi'] = $this->m_prestasi->edit($where, 'prestasi')->result();
+        $data['prestasi'] = $this->M_prestasi->edit($where, 'prestasi')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/prestasi/edit', $data);
@@ -81,7 +81,7 @@ class PrestasiController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_prestasi->update($where, $data, 'prestasi');
+        $this->M_prestasi->update($where, $data, 'prestasi');
         redirect('PrestasiController/dashboard');
     }
     public function tambah()
@@ -99,18 +99,18 @@ class PrestasiController extends CI_Controller
             'deskripsi' => $deskripsi
         );
 
-        $this->m_prestasi->input('prestasi', $data);
+        $this->M_prestasi->input('prestasi', $data);
         redirect('PrestasiController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
-        $this->m_prestasi->hapus('prestasi', $where);
+        $this->M_prestasi->hapus('prestasi', $where);
         redirect('PrestasiController/dashboard');
     }
     public function tambahFoto($id)
     {
-        $data['galeri_prestasi'] = $this->m_prestasi->tampil_galeri($id);
+        $data['galeri_prestasi'] = $this->M_prestasi->tampil_galeri($id);
         $data['id_prestasi'] = $id;
 
         $this->load->view('/templates/dashboard/header');
@@ -142,13 +142,13 @@ class PrestasiController extends CI_Controller
             'id_prestasi' => $id_prestasi
         );
 
-        $this->m_prestasi->input('galeri_prestasi', $data);
+        $this->M_prestasi->input('galeri_prestasi', $data);
         redirect('PrestasiController/dashboard');
     }
     public function hapusFoto($id)
     {
         $where = array('id' => $id);
-        $this->m_prestasi->hapus('galeri_prestasi', $where);
+        $this->M_prestasi->hapus('galeri_prestasi', $where);
         redirect('PrestasiController/dashboard');
     }
 }

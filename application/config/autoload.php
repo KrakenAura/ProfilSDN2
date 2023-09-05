@@ -133,16 +133,16 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array(
-    'm_sambutan',
-    'm_strukturOrganisasi',
-    'm_visimisi',
-    'm_profilSekolah',
-    'm_kegiatanRutin',
-    'm_ekstrakulikuler',
-    'm_contact',
-    'm_prestasi',
-    'm_artikel',
-    'm_auth',
-    'm_hero',
-    'm_login'
+    'M_sambutan',
+    'M_strukturOrganisasi',
+    'M_visimisi',
+    'M_profilSekolah',
+    'M_kegiatanRutin',
+    'M_ekstrakulikuler',
+    'M_contact',
+    'M_prestasi',
+    'M_artikel',
+    'M_auth',
+    'M_hero',
+    'M_login'
 );

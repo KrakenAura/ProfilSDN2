@@ -1,6 +1,6 @@
 <?php
 
-class m_profilSekolah extends CI_Model
+class M_profilSekolah extends CI_Model
 {
     public function tampil_data()
     {

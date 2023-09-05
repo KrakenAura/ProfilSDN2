@@ -5,7 +5,7 @@
 //     public function index()
 //     {
 
-//         $data['admin'] = $this->m_login->login()->result();
+//         $data['admin'] = $this->M_login->login()->result();
 //         print_r($data);
 //         $this->load->view('templates/dashboard/login', $data);
 //     }
@@ -20,7 +20,7 @@
 //             'username' => $username,
 //             'password' => $password
 //         );
-//         $cek = $this->m_login->cek_login("admin", $where)->num_rows();
+//         $cek = $this->M_login->cek_login("admin", $where)->nuM_rows();
 //         if ($cek > 0) {
 
 //             $data_session = array(
@@ -50,7 +50,7 @@ class LoginController extends CI_Controller
 {
     public function index()
     {
-        $data['admin'] = $this->m_login->login()->result();
+        $data['admin'] = $this->M_login->login()->result();
         $this->load->view('templates/dashboard/login', $data);
     }
 
@@ -63,7 +63,7 @@ class LoginController extends CI_Controller
             'username' => $username,
             'password' => $password
         );
-        $cek = $this->m_login->cek_login('admin', $where)->num_rows();
+        $cek = $this->M_login->cek_login('admin', $where)->nuM_rows();
         if ($cek > 0) {
             $data_session = array(
                 'nama' => $username,
@@ -85,7 +85,7 @@ class LoginController extends CI_Controller
     //     $where = array(
     //         'username' => $username,
     //     );
-    //     $user = $this->m_login->cek_login('admin', $where);
+    //     $user = $this->M_login->cek_login('admin', $where);
 
     //     if ($user && strcasecmp($user->username, $username) === 0 && password_verify($password, $user->password)) {
     //         $data_session = array(

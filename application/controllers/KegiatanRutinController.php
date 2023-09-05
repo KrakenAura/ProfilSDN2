@@ -21,8 +21,8 @@ class KegiatanRutinController extends CI_Controller
      */
     public function index()
     {
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data('kegiatan_rutin')->result();
-        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
+        $data['kegiatan_rutin'] = $this->M_kegiatanRutin->tampil_data('kegiatan_rutin')->result();
+        $data['hero'] = $this->M_hero->tampil_data('Kegiatan Rutin');
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/kegiatan', $data);
@@ -30,7 +30,7 @@ class KegiatanRutinController extends CI_Controller
     }
     public function dashboard()
     {
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->tampil_data('kegiatan_rutin')->result();
+        $data['kegiatan_rutin'] = $this->M_kegiatanRutin->tampil_data('kegiatan_rutin')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/kegiatan_rutin/kegiatan_rutin', $data);
@@ -38,11 +38,11 @@ class KegiatanRutinController extends CI_Controller
     }
     public function detail($id)
     {
-        $this->load->model('m_kegiatanRutin');
-        $detail = $this->m_kegiatanRutin->detail_data($id);
+        $this->load->model('M_kegiatanRutin');
+        $detail = $this->M_kegiatanRutin->detail_data($id);
         $data['detail'] = $detail;
-        $data['hero'] = $this->m_hero->tampil_data('Kegiatan Rutin');
-        $data['galeri_kegiatan'] = $this->m_kegiatanRutin->tampil_galeri($id);
+        $data['hero'] = $this->M_hero->tampil_data('Kegiatan Rutin');
+        $data['galeri_kegiatan'] = $this->M_kegiatanRutin->tampil_galeri($id);
 
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
@@ -74,19 +74,19 @@ class KegiatanRutinController extends CI_Controller
             'jadwal' => $jadwal,
             'foto' => $foto
         );
-        $this->m_kegiatanRutin->input('kegiatan_rutin', $data);
+        $this->M_kegiatanRutin->input('kegiatan_rutin', $data);
         redirect('KegiatanRutinController/dashboard');
     }
     public function hapus($id)
     {
         $where = array('id' => $id);
-        $this->m_kegiatanRutin->hapus('kegiatan_rutin', $where);
+        $this->M_kegiatanRutin->hapus('kegiatan_rutin', $where);
         redirect('KegiatanRutinController/dashboard');
     }
     public function edit($id)
     {
         $where = array('id' => $id);
-        $data['kegiatan_rutin'] = $this->m_kegiatanRutin->edit($where, 'kegiatan_rutin')->result();
+        $data['kegiatan_rutin'] = $this->M_kegiatanRutin->edit($where, 'kegiatan_rutin')->result();
         $this->load->view('/templates/dashboard/header');
         $this->load->view('/templates/dashboard/sidebar');
         $this->load->view('/templates/dashboard/database/kegiatan_rutin/edit', $data);
@@ -115,7 +115,7 @@ class KegiatanRutinController extends CI_Controller
             }
         } else {
             // No file uploaded, keep the existing value
-            $existingData = $this->m_kegiatanRutin->getById($id); // Assuming this method fetches existing data
+            $existingData = $this->M_kegiatanRutin->getById($id); // Assuming this method fetches existing data
             $foto = $existingData->foto;
         }
 
@@ -130,12 +130,12 @@ class KegiatanRutinController extends CI_Controller
             'id' => $id
         );
 
-        $this->m_kegiatanRutin->update($where, $data, 'kegiatan_rutin');
+        $this->M_kegiatanRutin->update($where, $data, 'kegiatan_rutin');
         redirect('KegiatanRutinController/dashboard');
     }
     public function tambahFoto($id)
     {
-        $data['galeri_kegiatan'] = $this->m_kegiatanRutin->tampil_galeri($id);
+        $data['galeri_kegiatan'] = $this->M_kegiatanRutin->tampil_galeri($id);
         $data['id_kegiatan'] = $id;
 
         $this->load->view('/templates/dashboard/header');
@@ -168,13 +168,13 @@ class KegiatanRutinController extends CI_Controller
         );
         print_r($data);
 
-        $this->m_kegiatanRutin->input('galeri_kegiatan', $data);
+        $this->M_kegiatanRutin->input('galeri_kegiatan', $data);
         redirect('KegiatanRutinController/dashboard');
     }
     public function hapusFoto($id)
     {
         $where = array('id' => $id);
-        $this->m_kegiatanRutin->hapus('galeri_kegiatan', $where);
+        $this->M_kegiatanRutin->hapus('galeri_kegiatan', $where);
         redirect('KegiatanRutinController/dashboard');
     }
 }

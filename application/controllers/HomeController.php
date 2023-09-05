@@ -21,9 +21,9 @@ class HomeController extends CI_Controller
      */
     public function index()
     {
-        $data['sambutan'] = $this->m_sambutan->tampil_data()->result();
-        $data['hero'] = $this->m_hero->tampil_data('Home');
-        $data['artikel'] = $this->m_artikel->tampil_data()->result();
+        $data['sambutan'] = $this->M_sambutan->tampil_data()->result();
+        $data['hero'] = $this->M_hero->tampil_data('Home');
+        $data['artikel'] = $this->M_artikel->tampil_data()->result();
         $this->load->view('/templates/landing/header');
         $this->load->view('/templates/landing/navbar');
         $this->load->view('/templates/landing/index', $data);

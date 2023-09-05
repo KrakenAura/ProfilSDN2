@@ -1,6 +1,6 @@
 <?php
 
-class m_visimisi extends CI_Model
+class M_visimisi extends CI_Model
 {
     public function tampil_data($table)
     {
